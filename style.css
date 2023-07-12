@@ -80,6 +80,7 @@ ol, ul {
 .header-content {
     color: var(--light-color);
     padding-top: 174px;
+    position: relative;
 }
 
 .header-title {
@@ -91,4 +92,40 @@ ol, ul {
     font-size: 24px;
     padding-top: 30px;
     max-width: 376px;
+}
+
+.shape-1 {
+    position: absolute;
+    top: 37px;
+    right: 0;
+}
+
+.shape-2 {
+    position: absolute;
+    bottom: -250px;
+    left: 300px;
+}
+
+.shape-3 {
+    position: absolute;
+    bottom: -220px;
+    left: 300px;
+}
+
+.shape-4 {
+    position: absolute;
+    bottom: 50px;
+    left: 230px;
+}
+
+.shape-5 {
+    position: absolute;
+    bottom: 30px;
+    left: 235px;
+}
+
+.shape-6 {
+    position: absolute;
+    top: 470px;
+    right: 50px;
 }
