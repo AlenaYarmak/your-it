@@ -166,3 +166,22 @@ ol, ul {
 .about-content:nth-last-child(2) {
     flex-direction: row-reverse;
 }
+
+/* CLIENTS */
+.clients-title {
+    font-size: 50px;
+    color: var(--primary-color);
+    max-width: 371px;
+    margin: 0 auto;
+}
+
+.clients-items {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.client-item {
+    max-width: 150px;
+}
+
