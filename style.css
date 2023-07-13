@@ -13,10 +13,6 @@
     --primary-color: #6A6D9E;
 }
 
-body {
-
-}
-
 a {
     text-decoration: none;
 }
@@ -184,4 +180,32 @@ ol, ul {
 .client-item {
     max-width: 150px;
 }
+
+/* FOOTER */
+.footer {
+    background-color: #DCE2F0;
+    margin-top: 110px;
+    padding: 133px 0px;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-img {
+    flex-grow: 1;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    color: #16194F;
+}
+
 
