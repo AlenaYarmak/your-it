@@ -178,6 +178,8 @@ ol, ul {
 
 .client-item {
     max-width: 150px;
+    min-height: 75px;
+    object-fit: contain;
 }
 
 /* MAP */
