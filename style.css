@@ -183,6 +183,14 @@ ol, ul {
 }
 
 /* MAP */
+.google-map {
+    width: 600px;
+    height: 400px;
+    border: 0;
+    border-radius: 25px;
+    box-shadow: 4px 10px 15px #cacbce, -4px 0px 15px #cacbce;
+    position: relative;
+}
 
 .map-content {
     display: flex;
@@ -205,18 +213,9 @@ ol, ul {
     width: 100px;
 }
 
-/* .describe-section {
-    height: 350px;
-    width: 350px;
-    background-color: rgb(216, 223, 223);
-    border-radius: 25px;
-    box-shadow: 4px 10px 15px #cacbce, -4px 0px 15px #cacbce;
-} */
-
 /* FOOTER */
 .footer {
     background-color: #DCE2F0;
-    margin-top: 110px;
     padding: 133px 0px;
 }
 
