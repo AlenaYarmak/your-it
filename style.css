@@ -219,14 +219,19 @@ ol, ul {
 
 .footer-content {
     display: flex;
+    align-items: flex-end;
 }
 
 .footer-img {
-    flex-grow: 1;
+    flex-grow: 2;
 }
 
 .footer-logo {
     height: 50px;
+}
+
+.footer-contacts {
+    flex-grow: 1;
 }
 
 .footer-nav {
@@ -235,6 +240,16 @@ ol, ul {
     align-items: center;
     flex-grow: 1;
     color: #16194F;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.social-img {
+    width: 30px;
 }
 
 
