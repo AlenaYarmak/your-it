@@ -42,12 +42,7 @@ ol, ul {
     background-position: center top;
     height: 1028px;
     box-shadow: 1px 5px 5px #6A6D9E;
-
-    /* styles for small image */
-    /* max-width: 1440px; */
-    /* margin: 0 auto; 
-    background-size: contain;
-    background-position: center bottom; */
+    z-index: 10;
 }
 
 .header-menu {
@@ -68,8 +63,9 @@ ol, ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 2;
+    flex-grow: 1;
     padding-right: 100px;
+    z-index: 100;
 }
 
 .menu-item a {
@@ -115,12 +111,14 @@ ol, ul {
     position: absolute;
     bottom: 50px;
     left: 230px;
+    z-index: 1;
 }
 
 .shape-5 {
     position: absolute;
     bottom: 30px;
     left: 235px;
+    z-index: 2;
 }
 
 .shape-6 {
