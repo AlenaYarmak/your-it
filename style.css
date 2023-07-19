@@ -13,6 +13,11 @@
     --primary-color: #6A6D9E;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }
@@ -251,5 +256,3 @@ ol, ul {
 .social-img {
     width: 30px;
 }
-
-
