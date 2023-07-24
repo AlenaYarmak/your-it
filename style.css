@@ -132,6 +132,12 @@ ol, ul {
     right: 50px;
 }
 
+/* BURGER-MENU */
+
+.burger-menu {
+    display: none;
+}
+
 /* ABOUT US */
 .about-title {
     font-size: 50px;

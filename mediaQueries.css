@@ -77,3 +77,13 @@
         max-width: 120px;
     }
 }
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
