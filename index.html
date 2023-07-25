@@ -24,14 +24,19 @@
                         <li class="menu-item"><a class="scrolls-link" href="#contacts">Контакти</a></li>
                         <li class="menu-item"><a class="scrolls-link" href="#offerta">Публічна оферта</a></li>
                     </ul>
-                    <div class="burger-menu">
-                        <ul class="burger-nav
-                        ">
+                    <div class="burger-menu" id="burger-menu">
+                        <ul class="burger-nav" id="burger-nav">
                             <li class="burger-item"><a class="scrolls-link" href="#about">Про нас</a></li>
                             <li class="burger-item"><a class="scrolls-link" href="#contacts">Контакти</a></li>
                             <li class="burger-item"><a class="scrolls-link" href="#offerta">Публічна оферта</a></li>
                         </ul>
-                        <div class="line"></div>
+                        <!-- <div class="burger-icon" id="burger-icon"></div> -->
+                        <label for="check" id="burger-icon">
+                            <input type="checkbox" id="check"/> 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </label>
                     </div>
                 </div>
                 <div class="header-content">
@@ -145,6 +150,7 @@
     </div>
 
     <script src="animation.js"></script>
+    <script src="hamburgerMenu.js"></script>
     <script src="scroll.js"></script>
 </body>
 </html>
