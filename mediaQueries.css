@@ -86,4 +86,34 @@
     .burger-menu {
         display: block;
     }
+
+    .header-content {
+        padding-top: 0px;
+    }
+
+    .shape-1, .shape-2, .shape-3, .shape-6 {
+        width: 50px;
+    }
+    
+    .shape-1 {
+        top: 0;
+    }
+
+    .shape-2 {
+        bottom: -69px;
+    }
+
+    .shape-3 {
+        bottom: -88px;
+    }
+
+    .shape-6 {
+        top: 160px;
+    }
+
+    .about-image {
+        max-width: 260px;
+    }
+
+    
 }
