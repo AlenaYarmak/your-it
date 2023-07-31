@@ -20,6 +20,7 @@ html, body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 a:visited {
@@ -260,6 +261,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
 .about-text {
     display: flex;
     align-items: center;
+    text-align: justify;
     max-width: 434px;
     color: var(--primary-color);
     font-size: 20px;
@@ -283,8 +285,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
 .client-item {
     max-width: 150px;
-    min-height: 75px;
-    object-fit: contain;
 }
 
 /* MAP */
@@ -318,12 +318,13 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
 /* FOOTER */
 .footer {
     background-color: #DCE2F0;
-    padding: 133px 0px;
+    padding-top: 133px;
 }
 
 .footer-content {
     display: flex;
     align-items: flex-end;
+    padding-bottom: 50px;
 }
 
 .footer-img {
@@ -355,3 +356,12 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
 .social-img {
     width: 30px;
 }
+
+.used-info {
+    padding: 25px 0px;
+    font-size: 7px;
+}
+
+/* .used-info-text {
+    font-size: 7px;
+} */
