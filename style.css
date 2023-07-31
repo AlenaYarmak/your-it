@@ -347,6 +347,10 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
     color: #16194F;
 }
 
+.footer-nav .scrolls-link {
+    color: var(--primary-color);
+}
+
 .footer-socials {
     display: flex;
     justify-content: space-between;
@@ -358,8 +362,10 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
 }
 
 .used-info {
+    color: var(--primary-color);
     padding: 25px 0px;
     font-size: 7px;
+    opacity: .5;
 }
 
 /* .used-info-text {
