@@ -6,7 +6,8 @@
     .header {
         background: url(./img/background-m.png);
         height: 850px;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 }
 
@@ -66,7 +67,8 @@
     .about-image {
         max-width: 350px;
         max-height: 230px;
-        object-fit: contain;
+        -o-object-fit: contain;
+           object-fit: contain;
     }
 
     .about-text {
@@ -208,12 +210,20 @@
     }
 
     .about-content {
-        flex-direction: column-reverse;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .about-content:nth-last-child(2) {
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
     }
 
     .about-image {
@@ -225,8 +235,13 @@
     }
 
     .clients-items {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .client-item {
@@ -260,8 +275,13 @@
     }
 
     .footer-content {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .used-info  {
