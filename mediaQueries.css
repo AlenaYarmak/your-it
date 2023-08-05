@@ -18,6 +18,9 @@
 }
 
 @media (max-width: 992px) {
+    .container {
+        padding: 0px 70px;
+    }
     .header {
         background-size: cover;
         height: 600px;
@@ -54,6 +57,16 @@
 
     .shape-3 {
         bottom: -202px;
+    }
+
+    .shape-4 {
+        bottom: -35px; 
+        left: 263px;
+    }
+
+    .shape-5 {
+        bottom: -35px;
+        left: 263px;
     }
 
     .shape-6 {

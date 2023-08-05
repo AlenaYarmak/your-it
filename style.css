@@ -88,6 +88,7 @@ ol, ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 20px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -333,6 +334,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;-ms-flex-align: center;align-items: center;
     padding: 100px 0px;
 }
 
