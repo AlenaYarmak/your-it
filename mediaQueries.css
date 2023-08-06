@@ -124,6 +124,16 @@
         bottom: -88px;
     }
 
+    .shape-4 {
+        bottom: 50px;
+        left: 230px;
+    }
+
+    .shape-5 {
+        bottom: 30px;
+        left: 235px;
+    }
+
     .shape-6 {
         top: 160px;
     }
@@ -211,6 +221,14 @@
     .header-description {
         font-size: 20px;
         max-width: 290px;
+    }
+
+    .shape-4 {
+        display: none;
+    }
+
+    .shape-5 {
+        display: none;
     }
 
     .shape-6 {
