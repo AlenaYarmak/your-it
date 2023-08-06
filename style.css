@@ -41,6 +41,19 @@ ol, ul {
     margin: 0 auto;
 }
 
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 1s, transform 1s;
+    visibility: hidden; 
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
 /* HEADER */
 .wrapper {
     background-color: #F5F5F5;
@@ -62,6 +75,8 @@ ol, ul {
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
     z-index: 10;
+
+
 }
 
 .header-menu {
