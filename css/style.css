@@ -75,9 +75,42 @@ ol, ul {
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
     z-index: 10;
-
-
 }
+
+/* offerta */
+.header-s {
+    background: linear-gradient(#F44E77,#847DFA);
+    height: 220px;
+    -webkit-box-shadow: 1px 5px 5px #6A6D9E;
+            box-shadow: 1px 5px 5px #6A6D9E;
+    margin-bottom: 91px;
+}
+
+
+.btn-main {
+    background: #F5F5F5;
+    border-radius: 25px;
+    border: none;
+    color: var(--primary-color);
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+}
+
+.offerta-title {
+    margin: 0 auto;
+    max-width: 330px;
+    margin-bottom: 91px;
+}
+
+.offerta-text {
+    color: var(--primary-color);
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    padding-bottom: 91px;
+}
+/* offerta */
 
 .header-menu {
     display: -webkit-box;
@@ -136,6 +169,10 @@ ol, ul {
     font-size: 24px;
     padding-top: 30px;
     max-width: 376px;
+}
+
+.burger-link {
+    color: #fff;
 }
 
 .shape-1 {
@@ -247,49 +284,34 @@ ol, ul {
     transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-.burger-icon-stripe:nth-of-type(1){
+.stripe-1 {
     width: 50%;
 }
 
-.burger-icon-stripe:nth-of-type(2){
+.stripe-2 {
     width: 100%;
 }
 
-.burger-icon-stripe:nth-of-type(3){
+.stripe-3 {
     width: 75%;
 }
 
-input[type="checkbox"]{
-    display: none;
+.burger-icon-stripe.active-stripe-1 {
+    transform-origin: bottom;
+    transform: rotate(45deg) translate(9px, 5px);
 }
 
-input[type="checkbox"]:checked ~ span:nth-of-type(1){
-    -webkit-transform-origin: bottom;
-        -ms-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: rotatez(45deg) translate(9px, 5px);
-        -ms-transform: rotate(45deg) translate(9px, 5px);
-            transform: rotatez(45deg) translate(9px, 5px)
+.burger-icon-stripe.active-stripe-2 {
+    transform-origin: top;
+    transform: rotate(-45deg);
 }
 
-input[type="checkbox"]:checked ~ span:nth-of-type(2){
-    -webkit-transform-origin: top;
-        -ms-transform-origin: top;
-            transform-origin: top;
-    -webkit-transform: rotatez(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotatez(-45deg)
-}
-
-input[type="checkbox"]:checked ~ span:nth-of-type(3){ 
-    -webkit-transform-origin: bottom; 
-        -ms-transform-origin: bottom; 
-            transform-origin: bottom;
+.burger-icon-stripe.active-stripe-3 {
+    transform-origin: bottom;
     width: 50%;
-    -webkit-transform: translate(21px,-14px) rotatez(45deg);
-        -ms-transform: translate(21px,-14px) rotate(45deg);
-            transform: translate(21px,-14px) rotatez(45deg);
+    transform: translate(21px, -14px) rotate(45deg);
 }
+
 
 /* ABOUT US */
 .about-title {
@@ -433,7 +455,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
     color: #16194F;
 }
 
-.footer-nav .scrolls-link {
+.footer-link {
     color: var(--primary-color);
 }
 

@@ -6,9 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault()
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            console.log(targetId);
-            console.log(targetElement);
-
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
             }
