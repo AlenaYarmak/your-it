@@ -65,13 +65,14 @@ ol, ul {
 }
 
 .header {
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.1))), url(../img/background/background.png);
+    /* background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.1))), url(../img/background/background.png);
     background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1)), url(../img/background/background.png);
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1)), url(../img/background/background.png);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1)), url(../img/background/background.png); */
+    background: url(../img/background/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    height: 1028px;
+    height: 800px;
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
     z-index: 10;
@@ -156,7 +157,7 @@ ol, ul {
 
 .header-content {
     color: var(--light-color);
-    padding-top: 174px;
+    padding-top: 110px;
     position: relative;
 }
 
@@ -166,51 +167,41 @@ ol, ul {
 }
 
 .header-description {
-    font-size: 24px;
+    font-size: 30px;
     padding-top: 30px;
-    max-width: 376px;
+    max-width: 400px;
 }
 
 .burger-link {
     color: #fff;
 }
 
+.pc-img {
+    position: absolute;
+    right: 180px;
+    top: 110px;
+}
+
+.shape {
+    width: 120px
+}
+
 .shape-1 {
     position: absolute;
-    top: 37px;
-    right: 0;
+    top: 227px;
+    right: 78px;
 }
 
 .shape-2 {
     position: absolute;
-    bottom: -250px;
-    left: 300px;
+    bottom: -189px;
+    left: 410px;
 }
 
 .shape-3 {
     position: absolute;
-    bottom: -220px;
-    left: 300px;
-}
-
-.shape-4 {
-    position: absolute;
-    bottom: 50px;
-    left: 230px;
-    z-index: 1;
-}
-
-.shape-5 {
-    position: absolute;
-    bottom: 30px;
-    left: 235px;
-    z-index: 2;
-}
-
-.shape-6 {
-    position: absolute;
-    top: 470px;
-    right: 50px;
+    bottom: -175px;
+    left: 413px;
 }
 
 /* BURGER-MENU */
