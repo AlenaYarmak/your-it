@@ -195,14 +195,12 @@ ol, ul {
 .shape-2 {
     position: absolute;
     bottom: -132px;
-    /* left: 400px; */
     right: 600px;
 }
 
 .shape-3 {
     position: absolute;
     bottom: -128px;
-    /* left: 403px; */
     right: 603px;
 }
 
