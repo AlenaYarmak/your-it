@@ -72,7 +72,7 @@ ol, ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    height: 800px;
+    height: 750px;
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
     z-index: 10;
@@ -130,7 +130,7 @@ ol, ul {
 }
 
 .logo-img {
-    height: 50px;
+    height: 60px;
 }
 
 .nav-menu {
@@ -179,7 +179,7 @@ ol, ul {
 .pc-img {
     position: absolute;
     right: 180px;
-    top: 110px;
+    top: 50px;
 }
 
 .shape {
@@ -194,14 +194,16 @@ ol, ul {
 
 .shape-2 {
     position: absolute;
-    bottom: -189px;
-    left: 410px;
+    bottom: -132px;
+    /* left: 400px; */
+    right: 600px;
 }
 
 .shape-3 {
     position: absolute;
-    bottom: -175px;
-    left: 413px;
+    bottom: -128px;
+    /* left: 403px; */
+    right: 603px;
 }
 
 /* BURGER-MENU */
@@ -307,7 +309,7 @@ ol, ul {
 /* ABOUT US */
 .about-title {
     width: 230px;
-    padding: 110px 0;
+    padding: 80px 0;
 }
 
 .about-content {
@@ -317,7 +319,7 @@ ol, ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .about-image {
@@ -421,7 +423,7 @@ ol, ul {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 60px;
 }
 
 .footer-contacts {

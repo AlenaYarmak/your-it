@@ -3,17 +3,29 @@
         padding: 0 20px;
     }
 
-    .header {
+    /* .header {
         background: url(../img/background/background-m.png);
         height: 850px;
         -webkit-box-shadow: none;
                 box-shadow: none;
-    }
+    } */
 }
 
 @media (max-width: 1200px) {
     .container {
         padding: 0 30px;
+    }
+
+    .shape {
+        width: 100px
+    }
+
+    .shape-2 {
+        bottom: -100px;
+    }
+
+    .shape-3 {
+        bottom: -96px;
     }
 }
 
