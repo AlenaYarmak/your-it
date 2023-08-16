@@ -439,6 +439,13 @@ ol, ul {
             flex-grow: 1;
 }
 
+.footer-info {
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
 .footer-nav {
     display: -webkit-box;
     display: -ms-flexbox;
