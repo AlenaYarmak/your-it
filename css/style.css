@@ -172,6 +172,15 @@ ol, ul {
     max-width: 400px;
 }
 
+.header-description--mobile {
+    display: none;
+    color: var(--light-color);
+    font-size: 28px;
+    margin-top: -120px;
+    max-width: 253px;
+    z-index: 111;
+}
+
 .burger-link {
     color: #fff;
 }
