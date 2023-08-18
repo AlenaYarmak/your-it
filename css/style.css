@@ -12,6 +12,7 @@
 :root {
     --light-color: #FFF;
     --primary-color: #6A6D9E;
+    --hover-color: #3E377B;
 }
 
 html, body {
@@ -65,13 +66,11 @@ ol, ul {
 }
 
 .header {
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.1))), url(../img/background/background.png);
-    background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1)), url(../img/background/background.png);
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1)), url(../img/background/background.png);
+    background: url(../img/background/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    height: 1028px;
+    height: 750px;
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
     z-index: 10;
@@ -79,8 +78,8 @@ ol, ul {
 
 /* offerta */
 .header-s {
-    background: linear-gradient(#F44E77,#847DFA);
-    height: 220px;
+    background: linear-gradient(#433A7E,#6457A0);
+    height: 250px;
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
     margin-bottom: 91px;
@@ -95,6 +94,13 @@ ol, ul {
     font-size: 18px;
     width: 250px;
     height: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    color: var(--hover-color);
+    background: #d2d0df;
+    transition: all 0.3s ease;
 }
 
 .offerta-title {
@@ -110,7 +116,46 @@ ol, ul {
     text-align: justify;
     padding-bottom: 91px;
 }
-/* offerta */
+
+.return-btn {
+    padding-bottom: 50px;
+}
+
+.btn-up {
+    background: var(--primary-color);
+    border-radius: 15px;
+    width: 164px;
+    height: 64px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.btn-up::before {
+    content: '';
+    width: 10px;
+    height: 50px;
+    background: #F5F5F5;
+    border-radius: 5px;
+    top: 10%;
+    left: 36%;
+    /* right: 50%; */
+    position: absolute;
+    transform: rotate(60deg);
+}
+
+.btn-up::after {
+    content: '';
+    width: 10px;
+    height: 50px;
+    background: #F5F5F5;
+    border-radius: 5px;
+    top: 10%;
+    right: 36%;
+    /* right: 50%; */
+    position: absolute;
+    transform: rotate(-60deg);
+}
+/* offerta end */
 
 .header-menu {
     display: -webkit-box;
@@ -129,7 +174,7 @@ ol, ul {
 }
 
 .logo-img {
-    height: 50px;
+    height: 60px;
 }
 
 .nav-menu {
@@ -156,7 +201,7 @@ ol, ul {
 
 .header-content {
     color: var(--light-color);
-    padding-top: 174px;
+    padding-top: 110px;
     position: relative;
 }
 
@@ -166,51 +211,50 @@ ol, ul {
 }
 
 .header-description {
-    font-size: 24px;
+    font-size: 30px;
     padding-top: 30px;
-    max-width: 376px;
+    max-width: 400px;
+}
+
+.header-description--mobile {
+    display: none;
+    color: var(--light-color);
+    font-size: 28px;
+    margin-top: -120px;
+    max-width: 253px;
+    z-index: 111;
 }
 
 .burger-link {
     color: #fff;
 }
 
+.pc-img {
+    position: absolute;
+    right: 180px;
+    top: 50px;
+}
+
+.shape {
+    width: 120px
+}
+
 .shape-1 {
     position: absolute;
-    top: 37px;
-    right: 0;
+    top: 227px;
+    right: 78px;
 }
 
 .shape-2 {
     position: absolute;
-    bottom: -250px;
-    left: 300px;
+    bottom: -132px;
+    right: 600px;
 }
 
 .shape-3 {
     position: absolute;
-    bottom: -220px;
-    left: 300px;
-}
-
-.shape-4 {
-    position: absolute;
-    bottom: 50px;
-    left: 230px;
-    z-index: 1;
-}
-
-.shape-5 {
-    position: absolute;
-    bottom: 30px;
-    left: 235px;
-    z-index: 2;
-}
-
-.shape-6 {
-    position: absolute;
-    top: 470px;
-    right: 50px;
+    bottom: -128px;
+    right: 603px;
 }
 
 /* BURGER-MENU */
@@ -316,7 +360,7 @@ ol, ul {
 /* ABOUT US */
 .about-title {
     width: 230px;
-    padding: 110px 0;
+    padding: 80px 0;
 }
 
 .about-content {
@@ -326,7 +370,7 @@ ol, ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .about-image {
@@ -430,13 +474,29 @@ ol, ul {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 60px;
 }
 
 .footer-contacts {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.footer-phone,.footer-email {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.footer-phone:hover,.footer-email:hover {
+    color: var(--hover-color);
+    transition: all 0.3s ease;
 }
 
 .footer-nav {
@@ -452,11 +512,16 @@ ol, ul {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    color: #16194F;
 }
 
 .footer-link {
     color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--hover-color);
+    transition: all 0.3s ease;
 }
 
 .footer-socials {
@@ -469,13 +534,91 @@ ol, ul {
     padding-bottom: 50px;
 }
 
-.social-img {
-    width: 30px;
-}
-
 .used-info {
     color: var(--primary-color);
     padding: 25px 0px;
     font-size: 7px;
     opacity: .5;
+}
+
+/* social icons */
+
+.socail-email {
+    background: url(../img/socials/email.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.socail-email:hover {
+    background: url(../img/socials/hover-email.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.socail-phone {
+    background: url(../img/socials/phone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.socail-phone:hover {
+    background: url(../img/socials/hover-phone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.socail-telegram {
+    background: url(../img/socials/telegram.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.socail-telegram:hover {
+    background: url(../img/socials/hover-telegram.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.socail-viber {
+    background: url(../img/socials/viber.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.socail-viber:hover {
+    background: url(../img/socials/hover-viber.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.socail-whatsapp {
+    background: url(../img/socials/whatsapp.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.socail-whatsapp:hover {
+    background: url(../img/socials/hover-whatsapp.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
 }
