@@ -95,7 +95,6 @@ ol, ul {
     margin-bottom: 91px;
 }
 
-
 .btn-main {
     background: #F5F5F5;
     border-radius: 25px;
@@ -119,7 +118,7 @@ ol, ul {
 
 .offerta-title {
     margin: 0 auto;
-    max-width: 330px;
+    max-width: 425px;
     margin-bottom: 91px;
 }
 
@@ -128,7 +127,19 @@ ol, ul {
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
-    padding-bottom: 91px;
+    padding-bottom: 10px;
+}
+
+.offerta-subtitle {
+    padding: 15px 0px;
+    color: var(--hover-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.subtitle {
+   text-align: center;
+   padding: 20px 0px;
 }
 
 .return-btn {
