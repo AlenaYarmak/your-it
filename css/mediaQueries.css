@@ -1,14 +1,116 @@
+@media (max-width: 1400px) and (max-height: 1081px) {
+
+    .header {
+        height: 360px !important;
+    }
+
+    .pc-img {
+        width: 178px !important;
+        right: 110px !important;
+        top: 0px !important;
+    }
+
+    .shape {
+        width: 32px !important;
+    }
+
+    .shape-1 {
+        top: 60px !important;
+    }
+
+    .shape-2 {
+        bottom: 70px !important;
+        right: 260px !important;
+    }
+
+    .shape-3 {
+        bottom: 62px !important;
+        right: 234px !important;
+    }
+
+    .header-content {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 992px) and (max-height: 1081px) {
+
+    .logo-img {
+        height: 70px !important;
+    }
+
+    .pc-img {
+        width: 190px !important;
+        top: -10px !important;
+    }
+
+    .shape-1 {
+        right: 82px !important;
+    }
+
+    .shape-2 {
+        bottom: 60px !important;
+    }
+
+    .shape-3 {
+        bottom: 54px !important;
+        right: 248px !important;
+    }
+
+    .header-content {
+        padding-top: 60px !important;
+    }
+
+    .footer-logo {
+        height: 55px !important;
+    }
+}
+
+@media (max-width: 768px) and (max-height: 1081px) {
+
+    .pc-img {
+        right: 30px !important;
+        width: 160px !important;
+        top: -150px !important;
+    }
+
+    .shape-1 {
+        top: -100px !important;
+        right: 10px !important;
+    }
+
+    .shape-2 {
+        bottom: 130px !important;
+        right: 160px !important;
+    }
+
+    .shape-3 {
+        bottom: 124px !important;
+        right: 152px !important;
+    }
+}
+
+@media (max-width: 576px) and (max-height: 1081px) {
+    .pc-img {
+        width: 130px !important;
+        top: -12px !important;
+    }
+
+    .header-description--mobile {
+        max-width: 340px !important;
+        z-index: 111 !important;
+    }
+
+    .logo-img {
+        height: 60px !important;
+    }
+}
+
 @media (max-width: 1400px) {
     .container {
         padding: 0 20px;
     }
 
-    /* .header {
-        background: url(../img/background/background-m.png);
-        height: 850px;
-        -webkit-box-shadow: none;
-                box-shadow: none;
-    } */
 }
 
 @media (max-width: 1200px) {
@@ -90,8 +192,6 @@
     .about-image {
         max-width: 350px;
         max-height: 230px;
-        -o-object-fit: contain;
-           object-fit: contain;
     }
 
     .about-text {
@@ -222,10 +322,6 @@
 
     .header-menu {
         padding-top: 45px;
-    }
-
-    .logo-img {
-        max-width: 130px;
     }
 
     .burger-menu {
