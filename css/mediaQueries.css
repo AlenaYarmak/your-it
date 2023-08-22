@@ -111,6 +111,10 @@
         padding: 0 20px;
     }
 
+    .title {
+        padding: 80px 0px;
+    }
+
 }
 
 @media (max-width: 1200px) {
@@ -135,6 +139,11 @@
     .container {
         padding: 0px 70px;
     }
+
+    .title {
+        padding: 70px 0px;
+    }
+
     .header {
         background-size: cover;
         height: 600px;
@@ -150,10 +159,6 @@
 
     .nav-menu {
         padding-right: 59px;
-    }
-
-    .header-title {
-        font-size: 46px;
     }
 
     .header-description {
@@ -210,6 +215,10 @@
         display: none;
     }
 
+    .title {
+        padding: 60px 0px;
+    }
+
     .burger-menu {
         display: block;
     }
@@ -262,11 +271,6 @@
         font-size: 36px;
     }
 
-    .about-title {
-        width: 150px;
-        padding: 50px 0;
-    }
-
     .about-content {
         padding-bottom: 50px;
     }
@@ -281,10 +285,6 @@
         line-height: 20px;
     }
 
-    .clients-title {
-        width: 230px;
-    }
-
     .clients-items {
         padding: 50px 0px;
     }
@@ -297,10 +297,6 @@
         max-width: 500px;
     }
 
-    .map-title {
-        max-width: 330px;
-    }
-
     .map-content {
         padding: 50px;
     }
@@ -310,9 +306,11 @@
     .container {
         padding: 0px 30px;
     }
+
     .title {
         font-size: 32px;
     }
+
     .header {
         background: url(../img/background/background-s.png);
         max-width: 576px;
@@ -328,11 +326,6 @@
         width: 220px;
         height: 220px;
         margin-left: 10px;
-    }
-
-    .header-title {
-        font-size: 36px;
-        padding-top: 10px;
     }
 
     .header-description {
@@ -352,11 +345,6 @@
     .pc-img {
         width: 200px;
         top: 0px;
-    }
-
-    .about-title {
-        width: 125px;
-        padding: 30px 0;
     }
 
     .about-content {
@@ -380,10 +368,6 @@
         max-width: 350px;
     }
 
-    .clients-title {
-        width: 200px;
-    }
-
     .clients-items {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -401,10 +385,6 @@
 
     .clients-items a:last-child > .client-item {
         padding-bottom: 0px;
-    }
-
-    .map-title {
-        max-width: 290px;
     }
 
     .google-map {
@@ -454,20 +434,8 @@
         flex-direction: column;
     }
 
-    .about-title {
-        width: 110px;
-    }
-
     .about-image {
         max-width: 300px;
-    }
-
-    .clients-title {
-        width: 180px;
-    }
-
-    .map-title {
-        max-width: 260px;
     }
 
     .google-map {
@@ -481,23 +449,11 @@
         font-size: 24px;
     }
 
-    .about-title {
-        width: 95px;
-    }
-
     .about-image {
         max-width: 220px;
     }
 
     .about-text {
-        max-width: 220px;
-    }
-
-    .clients-title {
-        width: 150px;
-    }
-
-    .map-title {
         max-width: 220px;
     }
 

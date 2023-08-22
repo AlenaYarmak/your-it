@@ -39,7 +39,8 @@ ol, ul {
     font-size: 50px;
     font-weight: 700;
     color: var(--primary-color);
-    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0px;
 }
 
 .fade-in-section {
@@ -246,11 +247,6 @@ ol, ul {
     position: relative;
 }
 
-.header-title {
-    font-size: 60px;
-    font-weight: 700;
-}
-
 .header-description {
     font-size: 30px;
     padding-top: 30px;
@@ -411,10 +407,6 @@ ol, ul {
 
 
 /* ABOUT US */
-.about-title {
-    width: 230px;
-    padding: 80px 0;
-}
 
 .about-content {
     display: -webkit-box;
@@ -456,9 +448,6 @@ ol, ul {
 }
 
 /* CLIENTS */
-.clients-title {
-    max-width: 371px;
-}
 
 .clients-items {
     display: -webkit-box;
@@ -468,7 +457,6 @@ ol, ul {
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;-ms-flex-align: center;align-items: center;
-    padding: 100px 0px;
 }
 
 .client-item {
@@ -492,15 +480,11 @@ ol, ul {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 120px 50px;
+    padding: 0px 50px 100px;
 }
 
 .map-section {
     border-radius: 25px;
-}
-
-.map-title {
-    width: 450px;
 }
 
 .map-img {
