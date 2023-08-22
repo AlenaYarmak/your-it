@@ -130,6 +130,10 @@ ol, ul {
     padding-bottom: 10px;
 }
 
+.offerta > :nth-last-child(2) {
+    padding-bottom: 55px;
+}
+
 .offerta-subtitle {
     padding: 15px 0px;
     color: var(--hover-color);
@@ -153,6 +157,16 @@ ol, ul {
     height: 64px;
     margin: 0 auto;
     position: relative;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-up:hover {
+    background: var(--hover-color);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-up::before {
