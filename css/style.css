@@ -597,6 +597,26 @@ ol, ul {
 
 /* social icons */
 
+/* .socail-email {
+    background: url(../img/socials/email.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.socail-email:hover {
+    background: url(../img/socials/hover-email.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+} */
+
 .socail-email {
     background: url(../img/socials/email.png);
     background-size: contain;
@@ -616,6 +636,8 @@ ol, ul {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+
+
 
 .socail-phone {
     background: url(../img/socials/phone.png);
