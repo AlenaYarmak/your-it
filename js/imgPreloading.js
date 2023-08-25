@@ -1,11 +1,12 @@
-let hoverEmail = new Image();
-let hoverPhone = new Image();
-let hoverTelegram = new Image();
-let hoverViber = new Image();
-let hoverWhatsapp = new Image();
+let imgToLoad = [
+    '../img/socials/hover-email.png',
+    '../img/socials/hover-phone.png',
+    '../img/socials/hover-telegram.png',
+    '../img/socials/hover-viber.png',
+    '../img/socials/hover-whatsapp.png'
+]
 
-hoverEmail.src = '../img/socials/hover-email.png';
-hoverPhone.src = '../img/socials/hover-phone.png';
-hoverTelegram.src = '../img/socials/hover-telegram.png';
-hoverViber.src = '../img/socials/hover-viber.png';
-hoverWhatsapp.src = '../img/socials/hover-whatsapp.png';
+imgToLoad.forEach(function(src) {
+    let img = new Image();
+    img.src = src;
+})
