@@ -597,7 +597,7 @@ ol, ul {
 
 /* social icons */
 
-/* .socail-email {
+.social-email {
     background: url(../img/socials/email.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -608,27 +608,7 @@ ol, ul {
     height: 30px;
 }
 
-.socail-email:hover {
-    background: url(../img/socials/hover-email.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-} */
-
-.socail-email {
-    background: url(../img/socials/email.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    width: 30px;
-    height: 30px;
-}
-
-.socail-email:hover {
+.social-email:hover {
     background: url(../img/socials/hover-email.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -639,7 +619,7 @@ ol, ul {
 
 
 
-.socail-phone {
+.social-phone {
     background: url(../img/socials/phone.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -650,7 +630,7 @@ ol, ul {
     height: 30px;
 }
 
-.socail-phone:hover {
+.social-phone:hover {
     background: url(../img/socials/hover-phone.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -659,7 +639,7 @@ ol, ul {
     transition: all 0.3s ease;
 }
 
-.socail-telegram {
+.social-telegram {
     background: url(../img/socials/telegram.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -670,7 +650,7 @@ ol, ul {
     height: 30px;
 }
 
-.socail-telegram:hover {
+.social-telegram:hover {
     background: url(../img/socials/hover-telegram.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -679,7 +659,7 @@ ol, ul {
     transition: all 0.3s ease;
 }
 
-.socail-viber {
+.social-viber {
     background: url(../img/socials/viber.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -690,7 +670,7 @@ ol, ul {
     height: 30px;
 }
 
-.socail-viber:hover {
+.social-viber:hover {
     background: url(../img/socials/hover-viber.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -699,7 +679,7 @@ ol, ul {
     transition: all 0.3s ease;
 }
 
-.socail-whatsapp {
+.social-whatsapp {
     background: url(../img/socials/whatsapp.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -710,7 +690,7 @@ ol, ul {
     height: 30px;
 }
 
-.socail-whatsapp:hover {
+.social-whatsapp:hover {
     background: url(../img/socials/hover-whatsapp.png);
     background-size: contain;
     background-repeat: no-repeat;
