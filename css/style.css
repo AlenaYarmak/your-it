@@ -4,8 +4,6 @@
     padding: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-
-    font-family: 'Roboto', sans-serif;
 }
 
 /* GLOBAL */
@@ -18,6 +16,10 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -39,19 +41,28 @@ ol, ul {
     font-size: 50px;
     font-weight: 700;
     color: var(--primary-color);
-    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0px;
 }
 
 .fade-in-section {
     opacity: 0;
-    transform: translateY(50px); 
-    transition: opacity 1s, transform 1s;
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px); 
+    -webkit-transition: opacity 1s, -webkit-transform 1s; 
+    transition: opacity 1s, -webkit-transform 1s; 
+    -o-transition: opacity 1s, transform 1s; 
+    transition: opacity 1s, transform 1s; 
+    transition: opacity 1s, transform 1s, -webkit-transform 1s;
     visibility: hidden; 
 }
 
 .fade-in-section.visible {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
     visibility: visible;
 }
 
@@ -78,13 +89,14 @@ ol, ul {
 
 /* offerta */
 .header-s {
+    background: -webkit-gradient(linear,left top, left bottom,from(#433A7E),to(#6457A0));
+    background: -o-linear-gradient(#433A7E,#6457A0);
     background: linear-gradient(#433A7E,#6457A0);
     height: 250px;
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
     margin-bottom: 91px;
 }
-
 
 .btn-main {
     background: #F5F5F5;
@@ -94,18 +106,22 @@ ol, ul {
     font-size: 18px;
     width: 250px;
     height: 50px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .btn-main:hover {
     color: var(--hover-color);
     background: #d2d0df;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .offerta-title {
     margin: 0 auto;
-    max-width: 330px;
+    max-width: 425px;
     margin-bottom: 91px;
 }
 
@@ -114,7 +130,23 @@ ol, ul {
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
-    padding-bottom: 91px;
+    padding-bottom: 10px;
+}
+
+.offerta > :nth-last-child(2) {
+    padding-bottom: 55px;
+}
+
+.offerta-subtitle {
+    padding: 15px 0px;
+    color: var(--hover-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.subtitle {
+   text-align: center;
+   padding: 20px 0px;
 }
 
 .return-btn {
@@ -128,6 +160,16 @@ ol, ul {
     height: 64px;
     margin: 0 auto;
     position: relative;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-up:hover {
+    background: var(--hover-color);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-up::before {
@@ -138,9 +180,10 @@ ol, ul {
     border-radius: 5px;
     top: 10%;
     left: 36%;
-    /* right: 50%; */
     position: absolute;
-    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+            transform: rotate(60deg);
 }
 
 .btn-up::after {
@@ -151,9 +194,10 @@ ol, ul {
     border-radius: 5px;
     top: 10%;
     right: 36%;
-    /* right: 50%; */
     position: absolute;
-    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+            transform: rotate(-60deg);
 }
 /* offerta end */
 
@@ -164,7 +208,7 @@ ol, ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 91px;
+    padding-top: 60px;
 }
 
 .logo {
@@ -174,7 +218,7 @@ ol, ul {
 }
 
 .logo-img {
-    height: 60px;
+    height: 100px;
 }
 
 .nav-menu {
@@ -205,11 +249,6 @@ ol, ul {
     position: relative;
 }
 
-.header-title {
-    font-size: 60px;
-    font-weight: 700;
-}
-
 .header-description {
     font-size: 30px;
     padding-top: 30px;
@@ -236,7 +275,7 @@ ol, ul {
 }
 
 .shape {
-    width: 120px
+    width: 120px;
 }
 
 .shape-1 {
@@ -341,27 +380,35 @@ ol, ul {
 }
 
 .burger-icon-stripe.active-stripe-1 {
-    transform-origin: bottom;
-    transform: rotate(45deg) translate(9px, 5px);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: rotate(45deg) translate(9px, 5px);
+        -ms-transform: rotate(45deg) translate(9px, 5px);
+            transform: rotate(45deg) translate(9px, 5px);
 }
 
 .burger-icon-stripe.active-stripe-2 {
-    transform-origin: top;
-    transform: rotate(-45deg);
+    -webkit-transform-origin: top;
+        -ms-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .burger-icon-stripe.active-stripe-3 {
-    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
     width: 50%;
-    transform: translate(21px, -14px) rotate(45deg);
+    -webkit-transform: translate(21px, -14px) rotate(45deg);
+        -ms-transform: translate(21px, -14px) rotate(45deg);
+            transform: translate(21px, -14px) rotate(45deg);
 }
 
 
 /* ABOUT US */
-.about-title {
-    width: 230px;
-    padding: 80px 0;
-}
 
 .about-content {
     display: -webkit-box;
@@ -374,6 +421,8 @@ ol, ul {
 }
 
 .about-image {
+    object-fit: contain;
+    height: fit-content;
     max-width: 463px;
     border-radius: 25px;
 }
@@ -386,6 +435,7 @@ ol, ul {
         -ms-flex-align: center;
             align-items: center;
     text-align: justify;
+    text-shadow: 1px 1px 4px #bdbfdd;
     max-width: 434px;
     color: var(--primary-color);
     font-size: 20px;
@@ -400,9 +450,6 @@ ol, ul {
 }
 
 /* CLIENTS */
-.clients-title {
-    max-width: 371px;
-}
 
 .clients-items {
     display: -webkit-box;
@@ -412,7 +459,6 @@ ol, ul {
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;-ms-flex-align: center;align-items: center;
-    padding: 100px 0px;
 }
 
 .client-item {
@@ -436,15 +482,11 @@ ol, ul {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 120px 50px;
+    padding: 0px 50px 100px;
 }
 
 .map-section {
     border-radius: 25px;
-}
-
-.map-title {
-    width: 450px;
 }
 
 .map-img {
@@ -474,7 +516,7 @@ ol, ul {
 }
 
 .footer-logo {
-    height: 60px;
+    height: 90px;
 }
 
 .footer-contacts {
@@ -484,18 +526,26 @@ ol, ul {
 }
 
 .footer-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-bottom: 50px;
 }
 
 .footer-phone,.footer-email {
     color: var(--primary-color);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .footer-phone:hover,.footer-email:hover {
     color: var(--hover-color);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -516,11 +566,15 @@ ol, ul {
 
 .footer-link {
     color: var(--primary-color);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .footer-link:hover {
     color: var(--hover-color);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -543,82 +597,104 @@ ol, ul {
 
 /* social icons */
 
-.socail-email {
+.social-email {
     background: url(../img/socials/email.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     width: 30px;
     height: 30px;
 }
 
-.socail-email:hover {
+.social-email:hover {
     background: url(../img/socials/hover-email.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
-.socail-phone {
+
+
+.social-phone {
     background: url(../img/socials/phone.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     width: 30px;
     height: 30px;
 }
 
-.socail-phone:hover {
+.social-phone:hover {
     background: url(../img/socials/hover-phone.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
-.socail-telegram {
+.social-telegram {
     background: url(../img/socials/telegram.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     width: 30px;
     height: 30px;
 }
 
-.socail-telegram:hover {
+.social-telegram:hover {
     background: url(../img/socials/hover-telegram.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
-.socail-viber {
+.social-viber {
     background: url(../img/socials/viber.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     width: 30px;
     height: 30px;
 }
 
-.socail-viber:hover {
+.social-viber:hover {
     background: url(../img/socials/hover-viber.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
-.socail-whatsapp {
+.social-whatsapp {
     background: url(../img/socials/whatsapp.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     width: 30px;
     height: 30px;
 }
 
-.socail-whatsapp:hover {
+.social-whatsapp:hover {
     background: url(../img/socials/hover-whatsapp.png);
     background-size: contain;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
