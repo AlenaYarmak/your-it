@@ -493,6 +493,149 @@ ol, ul {
     width: 100px;
 }
 
+/* FORM */
+
+.form-container {
+    border-radius: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 85px 38px;
+    max-width: 986px;
+    margin: 0 auto;
+    margin-bottom: 110px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item {
+    position: relative;
+}
+
+
+.form-input {
+    border: none;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    height: 56px;
+    margin-bottom: 21px;
+    width: 336px;
+    padding-left: 31px;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-placeholder {
+    position: absolute;
+    left: 31px;
+    top: 18px;
+    margin: auto 0;
+
+    color: #16194F;
+    font-size: 17px;
+    opacity: .5;
+}
+
+.message-input {
+    height: 128px;
+    padding-top: 18px;
+}
+
+
+/* .form-input {
+    border: none;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    height: 56px;
+    margin-bottom: 21px;
+    width: 336px;
+    padding-left: 23px;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form > .form-input:first-child {
+    margin-top: 28px;
+}
+
+.message {
+    height: 112px;
+}
+
+.form-message {
+    position: relative;
+}
+
+.message-label {
+    position: absolute;
+    bottom: 94px;
+    left: 31px;
+}
+
+.form-input::placeholder {
+    color: #16194F;
+    font-size: 17px;
+    opacity: .5;
+    padding-left: 31px;
+} */
+
+.form-submit {
+    border: none;
+    border-radius: 20px;
+    background-color: #BB47BA;
+    color: #fff;
+    max-width: 208px;
+    height: 56px;
+}
+
+/* .message-label {
+    color: #16194F;
+    opacity: .5;
+    font-size: 17px;
+} */
+
+.form-images {
+    position: relative;
+    flex-basis: 50%;
+}
+
+.form-image--1 {
+    position: absolute;
+    width: 211px;
+    height: 228px;
+    right: 0px;
+    top: 45px;
+    z-index: 90;
+}
+
+.form-image--2 {
+    position: absolute;
+    width: 145px;
+    height: 137px;
+    right: 140px;
+    top: 183px;
+}
+
+
+
 /* FOOTER */
 .footer {
     background-color: #DCE2F0;
