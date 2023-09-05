@@ -556,6 +556,7 @@ ol, ul {
 .message-input {
     height: 128px;
     padding-top: 18px;
+    resize: none;
 }
 
 .form-submit {
