@@ -8,7 +8,7 @@ inputs.forEach(function(input) {
         }
     })
 
-    input.addEventListener('blur', function() {
+    input.addEventListener('focusout', function() {
         let label = this.nextElementSibling;
         if (label && label.classList.contains('form-placeholder') && this.value === '') {
             label.style.display = 'block';
