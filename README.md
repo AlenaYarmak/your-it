@@ -33,7 +33,7 @@ chmod +x init.sh
 chmod +x start.sh
 chmod +x rebuild.sh
 
-./init.sh
+./init.sh example.com  // replace example.com with your domain name
 ./start.sh
 ```
 
