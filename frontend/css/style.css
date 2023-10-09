@@ -541,7 +541,6 @@ ol, ul {
     position: relative;
 }
 
-
 .form-input {
     border: none;
     border-radius: 20px;
@@ -756,8 +755,21 @@ ol, ul {
 .used-info {
     color: var(--primary-color);
     padding: 25px 0px;
-    font-size: 7px;
+    font-size: 10px;
     opacity: .5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.used-info-link {
+    font-style: italic;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.used-info-link:hover {
+    color: var(--hover-color);
 }
 
 /* social icons */
