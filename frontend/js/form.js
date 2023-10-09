@@ -38,6 +38,7 @@ form.addEventListener('submit', function(event) {
     const json = JSON.stringify(userData);
 
     console.log(json);
+    console.log(headers);
 
     fetch('http://localhost:3000/submit', {
         method: 'POST',
