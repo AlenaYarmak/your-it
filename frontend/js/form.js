@@ -1,5 +1,3 @@
-/* const { response } = require("express"); */
-
 let form = document.querySelector('.form');
 
 let inputs = document.querySelectorAll('.form-input');
@@ -8,6 +6,10 @@ let userName = document.getElementById('name');
 let userEmail = document.getElementById('email');
 let userPhone = document.getElementById('phone');
 let userMessage = document.getElementById('message');
+
+let wrapperBlur = document.querySelector('.wrapper--blur');
+let popupError = document.querySelector('.popup_error');
+let popupSuccess = document.querySelector('.popup_success');
 
 inputs.forEach(function(input) {
     input.addEventListener('focus', function() {
@@ -25,6 +27,16 @@ inputs.forEach(function(input) {
     })
 })
 
+function submitSuccess() {
+    popupSuccess.style.display = 'block';
+    wrapperBlur.style.display = 'block';
+}
+
+function submitError() {
+    popupError.style.display = 'block';
+    wrapperBlur.style.display = 'block';
+}
+
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -38,7 +50,7 @@ form.addEventListener('submit', function(event) {
     const json = JSON.stringify(userData);
 
     console.log(json);
-    console.log(headers);
+    /* console.log(headers); */
 
     fetch('http://localhost:3000/submit', {
         method: 'POST',
@@ -49,7 +61,7 @@ form.addEventListener('submit', function(event) {
     })
     .then(response => response.json())
     .then(data => {
-        // Handle the server's response (e.g., show a confirmation message)
+        submitSuccess();
         console.log(response.json);
     })
     .catch(error => {
