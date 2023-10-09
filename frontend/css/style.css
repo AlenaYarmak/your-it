@@ -70,11 +70,9 @@ ol, ul {
 .wrapper {
     background-color: #F5F5F5;
     position: relative;
-
-    /* background: rgba(0, 0, 0, 0.5); */
 }
 
-/* .wrapper::before {
+.wrapper--blur::before {
     content: "";
     position: absolute;
     top: 0;
@@ -83,7 +81,7 @@ ol, ul {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-} */
+}
 
 .container {
     max-width: 1140px;
@@ -588,6 +586,14 @@ ol, ul {
     color: #fff;
     max-width: 208px;
     height: 56px;
+
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color:#9f3d9d;
 }
 
 .form-images {
@@ -657,6 +663,9 @@ ol, ul {
     color: #FFF;
 }
 
+.popup_error {
+    display: block;
+}
 /* FOOTER */
 .footer {
     background-color: #DCE2F0;
