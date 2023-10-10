@@ -12,6 +12,8 @@ const popupButtons = document.querySelectorAll('.popup-button');
 const closeButtons = document.querySelectorAll('.close-button');
 const popups = document.querySelectorAll('.popup');
 
+const headerTop = document.getElementById('main');
+
 inputs.forEach(function(input) {
     input.addEventListener('focus', function() {
         let label = this.nextElementSibling;
@@ -27,6 +29,10 @@ inputs.forEach(function(input) {
         }
     })
 })
+
+function scrollToHeader() {
+    headerTop.scrollIntoView({ behavior: 'smooth' });
+}
 
 function showPopup(className) {
     const popup = document.querySelector(`.${className}`);
@@ -52,6 +58,13 @@ document.addEventListener('click', (event) => {
         if (!popup.contains(event.target)) {
             hidePopup(popup);
         }
+    })
+})
+
+popupButtons.forEach((popupButton, index) => {
+    popupButton.addEventListener('click', () => {
+        hidePopup(popups[index]);
+        scrollToHeader();
     })
 })
 
