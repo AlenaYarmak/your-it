@@ -8,8 +8,9 @@ const userPhone = document.getElementById('phone');
 const userMessage = document.getElementById('message');
 
 const wrapperBlur = document.querySelector('.wrapper--blur');
-const popupError = document.querySelector('.popup_error');
-const popupSuccess = document.querySelector('.popup_success');
+const popupButtons = document.querySelectorAll('.popup-button');
+const closeButtons = document.querySelectorAll('.close-button');
+const popups = document.querySelectorAll('.popup');
 
 inputs.forEach(function(input) {
     input.addEventListener('focus', function() {
@@ -31,9 +32,28 @@ function showPopup(className) {
     const popup = document.querySelector(`.${className}`);
     if (popup) {
         popup.style.display = 'block';
-        wrapperBlur.style.display = 'block';
+        wrapperBlur.classList.add('blur-background');
     }
 }
+
+function hidePopup(popup) {
+    popup.style.display = 'none';
+    wrapperBlur.classList.remove('blur-background');
+}
+
+closeButtons.forEach((closeButton, index) => {
+    closeButton.addEventListener('click', () => {
+        hidePopup(popups[index]);
+    })
+})
+
+document.addEventListener('click', (event) => {
+    popups.forEach((popup) => {
+        if (!popup.contains(event.target)) {
+            hidePopup(popup);
+        }
+    })
+})
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -47,9 +67,6 @@ form.addEventListener('submit', function(event) {
 
     const json = JSON.stringify(userData);
 
-    console.log(json);
-    /* console.log(headers); */
-
     fetch('http://localhost:3000/submit', {
         method: 'POST',
         body: json,
@@ -59,10 +76,10 @@ form.addEventListener('submit', function(event) {
     })
     .then(response => response.json())
     .then(data => {
-        showPopup(popupSuccess)
+        showPopup(popup_success)
     })
     .catch(error => {
-        showPopup(popupError)
+        showPopup(popup_error)
     });
 
 })
