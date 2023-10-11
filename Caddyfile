@@ -1,0 +1,7 @@
+{
+    email admin@example.com
+}
+
+test.us2h.com {
+    reverse_proxy /api http://backend:3000
+}
