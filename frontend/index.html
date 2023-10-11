@@ -10,12 +10,12 @@
     <title>Надiйний тил вашого бiзнесу yoUr-IT</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper--blur">
         <div class="header" id="main">
             <div class="container">
                 <div class="header-menu">
                     <div class="logo">
-                        <img class="logo-img" src="./img/logo/light-logo.png" alt="logo">
+                        <img class="logo-img" src="./img/logo/light-logo.svg" alt="logo">
                     </div>
                     <ul class="nav-menu">
                         <li class="menu-item"><a class="scrolls-link" href="#about">Про нас</a></li>
@@ -47,6 +47,7 @@
                 </div>
             </div>
             </div>
+
             <div class="about-us fade-in-section">
                 <div class="container">
                     <h2 class="about-title title" id="about">Про нас</h2>
@@ -59,8 +60,8 @@
                     <div class="about-content">
                         <div class="about-text">
                             <p>
-                                Ми прагнемо, щоб ви відчували себе спокійно та впевнено, знаючи, що ваша інформація в надійних руках. Ми беремо на себе відповідальність за збереження цінності ваших даних, навіть в умовах постійно змінного середовища. Коли ви вибираєте нас для розміщення своїх даних, ви обираєте не просто сервер, а послугу від партнера, який ставить на перше місце безпеку і захист того, що вам дорого. Наші дані - наша відповідальність, і ми готові довести це кожним ділом, професійною підтримкою – яка знає відповіді на всі питання.
-</p>
+                                Ми прагнемо, щоб ви відчували себе спокійно та впевнено, знаючи, що ваша інформація в надійних руках. Ми беремо на себе відповідальність за збереження цінності ваших даних, навіть в умовах постійно змінного середовища. Коли ви вибираєте нас для розміщення своїх даних, ви обираєте не просто сервер, а послугу від партнера, який ставить на перше місце безпеку і захист того, що вам дорого. Ваші дані - наша відповідальність, і ми готові довести це кожним ділом, професійною підтримкою – яка знає відповіді на всі питання.
+                            </p>
                         </div>
                         <img class="about-image" src="./img/about/about-2.png"></img>
                     </div>
@@ -73,6 +74,7 @@
                     </div>
                 </div>
         </div>
+
         <div class="clients fade-in-section">
             <div class="container">
                 <h2 class="clients-title title">Наші клієнти</h2>
@@ -99,6 +101,7 @@
                 </div>
             </div>
         </div>
+
         <div class="map fade-in-section">
             <div class="container">
                 <h3 class="map-title title">Ми на Google Maps</h3>
@@ -111,11 +114,65 @@
                 </div>
             </div>
         </div>
+
+        <div class="form-section fade-in-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-content">
+                        <h3 class="form-title">Контактна форма</h3>
+                        <form class="form" action="">
+                            <div class="form-item">
+                                <input class="form-input" id="name" type="text" minlength="3" required>
+                                <label class="form-placeholder" for="name">Твоє ім'я</label>
+                            </div>
+                            <div class="form-item">
+                                <input class="form-input" id="email" type="email" required>
+                                <label class="form-placeholder" for="email">Твій імейл</label>
+                            </div>
+                            <div class="form-item">
+                                <input class="form-input input-phone" id="phone" type="number" required>
+                                <label class="form-placeholder" for="phone">Телефон</label>
+                            </div>
+                            <div class="form-item">
+                                <textarea class="form-input message-input" name="" id="message"></textarea>
+                                <label class="form-placeholder" for="message">Повідомлення</label>
+                            </div>
+                            <input class="form-submit" type="submit" value="Відправити запит">
+                        </form>
+                    </div>
+                    <div class="form-images">
+                        <img class="form-image--1" src="./img/shapes/shape-1.svg" alt="">
+                        <img class="form-image--2" src="./img/shapes/shape-2.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup_error">
+            <div class="popup-wrapper">
+                <div class="close-button"></div>
+                <img class="popup-img" src="./img/popup/error.png">
+                <h3 class="popup-title">Упс!</h3>
+                <p class="popup-text">Щось пішло не так!</p>
+                <button class="popup-button">Повернутись на головну</button>
+            </div>
+        </div>
+
+        <div class="popup popup_success">
+            <div class="popup-wrapper">
+                <div class="close-button"></div>
+                <img class="popup-img" src="./img/popup/success.png">
+                <h3 class="popup-title">Ваші дані прийнято!</h3>
+                <p class="popup-text">Ми зв'яжемося з вами найближчим часом!</p>
+                <button class="popup-button">Повернутись на головну</button>
+            </div>
+        </div>
+
         <div class="footer" id="contacts">
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-img">
-                        <img class="footer-logo" src="./img/logo/dark-logo.png" alt="">
+                        <img class="footer-logo" src="./img/logo/dark-logo.svg" alt="">
                     </div>
                     <div class="footer-contacts">
                         <div class="footer-info">
@@ -136,12 +193,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="used-info"><p>Використані ресурсі та інформация:</p>
+                <div class="used-info">
+                    <p>Website Created and Coded by <a class="used-info-link" href="https://github.com/AlenaYarmak">Alena Yarmak</a></p>
                     <p class="used-info-text">Images designed by Freepik</p>
                     <p class="used-info-text">
                         <a href="https://www.flaticon.com/free-icons/telegram" title="telegram icons">Telegram icons created by riajulislam - Flaticon</a>
                     </p>
-                    
                 </div>
             </div>
         </div>
@@ -150,6 +207,7 @@
     <script src="./js/imgPreloading.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/hamburgerMenu.js"></script>
+    <script src="./js/form.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/fading.js"></script>
 </body>
