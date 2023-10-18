@@ -625,11 +625,16 @@ ol, ul {
     background-color: #fff;
     border-radius: 50px;
     display: none;
-    display: flex;
     justify-content: center;
     text-align: center;
     color: var(--primary-color);
     z-index: 999;
+    back
+}
+
+.popup_error {
+    display: flex;
+    padding: 0px 30px;
 }
 
 .popup-wrapper {

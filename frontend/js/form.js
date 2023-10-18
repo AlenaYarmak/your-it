@@ -8,6 +8,7 @@ const userPhone = document.getElementById('phone');
 const userMessage = document.getElementById('message');
 
 const wrapperBlur = document.querySelector('.wrapper--blur');
+const sectionOpacity = document.querySelector('.section--decrease-opacity');
 const popupButtons = document.querySelectorAll('.popup-button');
 const closeButtons = document.querySelectorAll('.close-button');
 const popups = document.querySelectorAll('.popup');
@@ -37,7 +38,7 @@ function scrollToHeader() {
 function showPopup(className) {
     const popup = document.querySelector(`.${className}`);
     if (popup) {
-        popup.style.display = 'block';
+        popup.style.display = 'flex';
         wrapperBlur.classList.add('blur-background');
     }
 }
