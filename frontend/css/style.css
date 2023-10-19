@@ -80,6 +80,10 @@ ol, ul {
     background: rgba(0, 0, 0, 0.3);
 }
 
+.section--decrease-opacity {
+    opacity: .7;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -634,7 +638,7 @@ ol, ul {
 }
 
 .popup_error {
-    display: flex;
+    /* display: flex; */
     padding: 0px 30px;
 }
 

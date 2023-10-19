@@ -9,12 +9,19 @@ const userMessage = document.getElementById('message');
 
 const wrapperBlur = document.querySelector('.wrapper--blur');
 const sectionOpacity = document.querySelector('.section--decrease-opacity');
+const mapSection = document.querySelector('.map-content');
+const formSection = document.querySelector('.form-container');
+
 const popupButtons = document.querySelectorAll('.popup-button');
 const closeButtons = document.querySelectorAll('.close-button');
+
 const popups = document.querySelectorAll('.popup');
+const popupSuccess = document.querySelector('.popup_success');
+const popupError = document.querySelector('.popup_error');
 
 const headerTop = document.getElementById('main');
 
+//show and hide labels within their inputs
 inputs.forEach(function(input) {
     input.addEventListener('focus', function() {
         let label = this.nextElementSibling;
@@ -31,29 +38,37 @@ inputs.forEach(function(input) {
     })
 })
 
+//smooth scroll to top page
 function scrollToHeader() {
     headerTop.scrollIntoView({ behavior: 'smooth' });
 }
 
+//show and hide popup block
 function showPopup(className) {
     const popup = document.querySelector(`.${className}`);
     if (popup) {
         popup.style.display = 'flex';
         wrapperBlur.classList.add('blur-background');
+        mapSection.classList.add('section--decrease-opacity');
+        formSection.classList.add('section--decrease-opacity');
     }
 }
 
 function hidePopup(popup) {
     popup.style.display = 'none';
     wrapperBlur.classList.remove('blur-background');
+    mapSection.classList.remove('section--decrease-opacity');
+    formSection.classList.remove('section--decrease-opacity');
 }
 
+//add addEventListener for closeButton
 closeButtons.forEach((closeButton, index) => {
     closeButton.addEventListener('click', () => {
         hidePopup(popups[index]);
     })
 })
 
+//hide popup when user click outside
 document.addEventListener('click', (event) => {
     popups.forEach((popup) => {
         if (!popup.contains(event.target)) {
@@ -62,6 +77,7 @@ document.addEventListener('click', (event) => {
     })
 })
 
+//hide popup and scroll to top
 popupButtons.forEach((popupButton, index) => {
     popupButton.addEventListener('click', () => {
         hidePopup(popups[index]);
@@ -69,6 +85,7 @@ popupButtons.forEach((popupButton, index) => {
     })
 })
 
+//form submit
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -88,13 +105,24 @@ form.addEventListener('submit', function(event) {
             'Content-Type': 'application/json'
         }
     })
-    .then(response => response.json())
-    .then(data => {
-        showPopup(popup_success)
+    .then(response => {
+        if (response.status === 429) {
+            showPopup('popup_error');
+
+            emptyForm();
+        } else {
+            return response.json().then(data => {
+                showPopup('popup_success');
+
+                emptyForm();
+            })
+        }
     })
     .catch(error => {
-        showPopup(popup_error)
-    });
+        showPopup('popup_error');
+
+        emptyForm();
+    })
 
 })
 
