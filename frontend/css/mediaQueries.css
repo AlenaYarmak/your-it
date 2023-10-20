@@ -112,6 +112,30 @@
         max-width: 120px;
     }
 
+    .form-container {
+        padding: 45px 75px 38px;
+    }
+
+    .form-title {
+        font-size: 36px;
+    }
+
+    .form-input {
+        width: 306px;
+    }
+
+    .form-image--1 {
+        width: 102px;
+        top: -36px;
+        right: -39px;
+    }
+
+    .form-image--2 {
+        width: 82px;
+        right: 45px;
+        top: 57px;
+    }
+
     .footer-logo {
         height: 55px;
     }
@@ -316,6 +340,8 @@
     .google-map {
         max-width: 350px;
     }
+
+
 
     .footer {
         padding-top: 83px;
