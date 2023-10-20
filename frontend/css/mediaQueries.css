@@ -201,6 +201,27 @@
     .map-content {
         padding: 50px;
     }
+
+    .form-container {
+        justify-content: center;
+    }
+
+    .form-images {
+        display: none;
+    }
+
+    .form-input {
+        width: 336px;
+    }
+
+    .form-title {
+        text-align: center;
+    }
+
+    .form-submit {
+        width: 300px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 576px) {
