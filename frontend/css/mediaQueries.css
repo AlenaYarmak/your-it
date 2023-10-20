@@ -341,7 +341,13 @@
         max-width: 350px;
     }
 
+    .form-title {
+        font-size: 28px;
+    }
 
+    .form-input {
+        width: 266px;
+    }
 
     .footer {
         padding-top: 83px;
