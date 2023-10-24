@@ -342,7 +342,7 @@
     }
 
     .form-title {
-        font-size: 28px;
+        font-size: 25px;
     }
 
     .form-input {
@@ -399,6 +399,14 @@
     .google-map {
         max-width: 300px;
     }
+
+    .form-title {
+        font-size: 22px;
+    }
+
+    .form-input {
+        width: 223px;
+    }
 }
 
 @media (max-width: 300px) {
@@ -430,5 +438,18 @@
     .google-map {
         max-width: 210px;
         height: 350px;
+    }
+
+    .form-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-input {
+        width: 170px;
+    }
+
+    .form-submit {
+        width: 170px;
     }
 }
