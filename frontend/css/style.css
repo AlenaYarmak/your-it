@@ -638,13 +638,16 @@ ol, ul {
 }
 
 .popup_error {
-    /* display: flex; */
     padding: 0px 30px;
+}
+
+.popup_limit {
+    display: flex;
 }
 
 .popup-wrapper {
     position: relative;
-    padding: 63px;
+    padding: 30px;
 }
 
 .popup-img {
@@ -685,7 +688,6 @@ ol, ul {
 	border-radius: 25px;
 	background: #d2d1d1;
     margin-left: auto;
-
 }
 
 .close-button:before {
