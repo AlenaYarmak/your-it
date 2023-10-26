@@ -637,9 +637,17 @@ ol, ul {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.popup_error {
-    padding: 0px 30px;
-}
+/* .popup_error {
+    display: flex;
+} */
+
+/* .popup_success {
+    display: flex;
+} */
+
+/* .popup_limit {
+    display: flex;
+} */
 
 .popup-wrapper {
     position: relative;
@@ -673,8 +681,8 @@ ol, ul {
 
 .wrapper-button {
     position: absolute;
-    top: 22px;
-    right: -10px;
+    top: 4%;
+    right: 5%;
 }
 
 .close-button {
