@@ -18,6 +18,7 @@ const closeButtons = document.querySelectorAll('.close-button');
 const popups = document.querySelectorAll('.popup');
 const popupSuccess = document.querySelector('.popup_success');
 const popupError = document.querySelector('.popup_error');
+const popupLimit = document.querySelector('.popup_limit');
 
 const headerTop = document.getElementById('main');
 
@@ -107,7 +108,7 @@ form.addEventListener('submit', function(event) {
     })
     .then(response => {
         if (response.status === 429) {
-            showPopup('popup_error');
+            showPopup('popup_limit');
 
             emptyForm();
         } else {

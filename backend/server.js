@@ -1,9 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
+
+// Middleware to parse JSON and form data
 app.use(bodyParser.json());
+
+// Enable CORS for all routes
+app.use(cors()); // Use the cors middleware
 
 const smtpConfig = {
     host: process.env.SMTP_HOST,

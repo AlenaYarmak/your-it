@@ -641,10 +641,6 @@ ol, ul {
     padding: 0px 30px;
 }
 
-.popup_limit {
-    display: flex;
-}
-
 .popup-wrapper {
     position: relative;
     padding: 30px;
