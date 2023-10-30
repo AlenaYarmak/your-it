@@ -112,17 +112,14 @@ form.addEventListener('submit', function(event) {
     .then(response => {
         if (response.ok) {
             showPopup('./img/popup/success.png', 'Ваші дані прийнято!', "Ми зв'яжемося з вами найближчим часом!");
-
             emptyForm();
-            
         } else {
-            emptyForm();
             handleErrorResponse(response);
+            emptyForm();
         }
     })
     .catch(error => {
         showPopup('popup_error');
-
         emptyForm();
     })
 
