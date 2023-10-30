@@ -19,7 +19,6 @@ const closeButton = document.querySelector('.close-button');
 //anchor top
 const headerTop = document.getElementById('main');
 
-const testBtn = document.querySelector('.test-btn');
 const popup = document.querySelector('.popup');
 const popupImg = document.querySelector('.popup-img');
 const popupTitle = document.querySelector('.popup-title');
@@ -74,11 +73,6 @@ document.addEventListener('click', (event) => {
     }
 });
 
-testBtn.addEventListener('click', function() {
-    showPopup('./img/popup/limit.png', 'Упс!', 'Забагато запитів! Спробуйте пізніше!');
-    console.log('test passes');
-})
-
 popupButton.addEventListener('click', () => {
     hidePopup();
     scrollToHeader();
@@ -119,8 +113,7 @@ form.addEventListener('submit', function(event) {
         }
     })
     .catch(error => {
-        showPopup('popup_error');
-        emptyForm();
+        window.location.href = '/error';
     })
 
 })

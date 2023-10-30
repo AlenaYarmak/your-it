@@ -108,7 +108,6 @@ ol, ul {
     height: 250px;
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
-    margin-bottom: 91px;
 }
 
 .btn-main {
@@ -135,7 +134,6 @@ ol, ul {
 .offerta-title {
     margin: 0 auto;
     max-width: 425px;
-    margin-bottom: 91px;
 }
 
 .offerta-text {
@@ -637,25 +635,6 @@ ol, ul {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-/* .popup_error {
-    display: flex;
-} */
-
-/* .popup_success {
-    display: flex;
-} */
-
-/* .popup_limit {
-    display: flex;
-} */
-
-.test-btn {
-    width: 100px;
-    height: 100px;
-    background: #16194F;
-    color: #bdbfdd;
-}
-
 .popup-wrapper {
     position: relative;
     padding: 30px;
@@ -866,8 +845,6 @@ ol, ul {
     transition: all 0.3s ease;
 }
 
-
-
 .social-phone {
     background: url(../img/socials/phone.png);
     background-size: contain;
@@ -953,17 +930,29 @@ ol, ul {
 .wrapper--error {
     height: 100vh;
     padding-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .error-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-radius: 50px;
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     padding: 45px 85px 38px;
     max-width: 800px;
     max-height: 600px;
@@ -971,13 +960,17 @@ ol, ul {
 
 .error-img {
     width: 300px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .error-title {
     color: var(--primary-color);
     font-size: 25px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 45px 0px;
 }
 
