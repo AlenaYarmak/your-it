@@ -1,7 +1,9 @@
+//form and wrapper variables
 const form = document.querySelector('.form');
+const wrapper = document.querySelector('.wrapper');
 
 const inputs = document.querySelectorAll('.form-input');
-
+//user data variables
 const userName = document.getElementById('name');
 const userEmail = document.getElementById('email');
 const userPhone = document.getElementById('phone');
@@ -11,16 +13,17 @@ const wrapperBlur = document.querySelector('.wrapper--blur');
 const sectionOpacity = document.querySelector('.section--decrease-opacity');
 const mapSection = document.querySelector('.map-content');
 const formSection = document.querySelector('.form-container');
-
-const popupButtons = document.querySelectorAll('.popup-button');
-const closeButtons = document.querySelectorAll('.close-button');
-
-const popups = document.querySelectorAll('.popup');
-const popupSuccess = document.querySelector('.popup_success');
-const popupError = document.querySelector('.popup_error');
-const popupLimit = document.querySelector('.popup_limit');
-
+//buttons variables
+const popupButton = document.querySelector('.popup-button');
+const closeButton = document.querySelector('.close-button');
+//anchor top
 const headerTop = document.getElementById('main');
+
+const testBtn = document.querySelector('.test-btn');
+const popup = document.querySelector('.popup');
+const popupImg = document.querySelector('.popup-img');
+const popupTitle = document.querySelector('.popup-title');
+const popupText = document.querySelector('.popup-text');
 
 //show and hide labels within their inputs
 inputs.forEach(function(input) {
@@ -44,46 +47,46 @@ function scrollToHeader() {
     headerTop.scrollIntoView({ behavior: 'smooth' });
 }
 
-//show and hide popup block
-function showPopup(className) {
-    const popup = document.querySelector(`.${className}`);
-    if (popup) {
-        popup.style.display = 'flex';
-        wrapperBlur.classList.add('blur-background');
-        mapSection.classList.add('section--decrease-opacity');
-        formSection.classList.add('section--decrease-opacity');
-    }
+//show popup
+function showPopup(imageSrc, title, text) {
+    popup.style.display = 'flex';
+    wrapperBlur.classList.add('blur-background');
+    mapSection.classList.add('section--decrease-opacity');
+    formSection.classList.add('section--decrease-opacity');
+
+    popupImg.src = imageSrc;
+    popupTitle.textContent = title;
+    popupText.textContent = text;
 }
 
-function hidePopup(popup) {
+//hide popup
+function hidePopup() {
     popup.style.display = 'none';
     wrapperBlur.classList.remove('blur-background');
     mapSection.classList.remove('section--decrease-opacity');
     formSection.classList.remove('section--decrease-opacity');
 }
 
-//add addEventListener for closeButton
-closeButtons.forEach((closeButton, index) => {
-    closeButton.addEventListener('click', () => {
-        hidePopup(popups[index]);
-    })
-})
-
 //hide popup when user click outside
 document.addEventListener('click', (event) => {
-    popups.forEach((popup) => {
-        if (!popup.contains(event.target)) {
-            hidePopup(popup);
-        }
-    })
+    if (popup.style.display === 'flex' && event.target !== popup && !popup.contains(event.target) && event.target !== testBtn) {
+        hidePopup();
+    }
+});
+
+testBtn.addEventListener('click', function() {
+    showPopup('./img/popup/limit.png', 'Упс!', 'Забагато запитів! Спробуйте пізніше!');
+    console.log('test passes');
 })
 
-//hide popup and scroll to top
-popupButtons.forEach((popupButton, index) => {
-    popupButton.addEventListener('click', () => {
-        hidePopup(popups[index]);
-        scrollToHeader();
-    })
+popupButton.addEventListener('click', () => {
+    hidePopup();
+    scrollToHeader();
+})
+
+//add addEventListener for closeButton
+closeButton.addEventListener('click', () => {
+    hidePopup();
 })
 
 //form submit
@@ -107,16 +110,14 @@ form.addEventListener('submit', function(event) {
         }
     })
     .then(response => {
-        if (response.status === 429) {
-            showPopup('popup_limit');
+        if (response.ok) {
+            showPopup('./img/popup/success.png', 'Ваші дані прийнято!', "Ми зв'яжемося з вами найближчим часом!");
 
             emptyForm();
+            
         } else {
-            return response.json().then(data => {
-                showPopup('popup_success');
-
-                emptyForm();
-            })
+            emptyForm();
+            handleErrorResponse(response);
         }
     })
     .catch(error => {
@@ -127,3 +128,28 @@ form.addEventListener('submit', function(event) {
 
 })
 
+function handleErrorResponse(response) {
+    switch (response.status) {
+        case 400:
+            showPopup('./img/popup/limit.png', 'Упс!', 'Сервер не може обробити запит! Спробуйте пізніше!');
+            break;
+        case 404:
+            showPopup('./img/popup/error.png', 'Упс!', 'Щось пішло не так із нашого боку. Повторіть спробу пізніше.');
+            break;
+        case 429:
+            showPopup('./img/popup/limit.png', 'Упс!', 'Забагато запитів! Спробуйте пізніше!');
+            break;
+        case 500:
+            showPopup('./img/popup/error.png', 'Упс!', 'Помилка серверу! Повторіть спробу пізніше.');
+            break;
+        case 503:
+            showPopup('./img/popup/error.png', 'Вибачте!', 'Відправка форми в даний час недоступна. Спробуйте пізніше!');
+            break;
+        case 504:
+            showPopup('./img/popup/error.png', 'Вибачте!', 'Не вдалося виконати відправку! Оновіть сторінку або спробуйте ще раз.');
+            break;
+        default:
+            showPopup('./img/popup/error.png', 'Вибачте!', 'Відправка форми в даний час недоступна. Спробуйте пізніше!');
+            break;
+    }
+}

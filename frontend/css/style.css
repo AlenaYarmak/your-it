@@ -649,6 +649,13 @@ ol, ul {
     display: flex;
 } */
 
+.test-btn {
+    width: 100px;
+    height: 100px;
+    background: #16194F;
+    color: #bdbfdd;
+}
+
 .popup-wrapper {
     position: relative;
     padding: 30px;
@@ -666,6 +673,8 @@ ol, ul {
 
 .popup-text {
     font-size: 22px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .popup-button {
