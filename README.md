@@ -23,22 +23,31 @@ Keep in mind that you need to relogin to apply changes.
 Clone repository to somewhere:
 
 ```bash
-git clone git@github.com:AlenaYarmak/landing-page.git
+git clone git@github.com:AlenaYarmak/your-it.git
 ```
 Go to clonned directory
 ```bash
-cd ./landing-page
-
-chmod +x init.sh
-chmod +x start.sh
-chmod +x rebuild.sh
-
-./init.sh example.com  // replace example.com with your domain name
-./start.sh
+cd ./your-it
 ```
 
-If changes in site sources:
+Change ```yourdomain.name``` domain name and email ```admin@example.com``` in Caddyfile to yours:
+
+```
+{
+    email admin@example.com
+}
+
+yourdomain.name {
+    root * /srv
+    file_server
+    reverse_proxy /api http://backend:3000
+}
+```
+
+Go to root of repository (you should be in same directory with docker-compose.yml file) and run docker-compose stack with command:
 
 ```bash
-./rebuild.sh
+docker-compose up -d
 ```
+
+After that wait for docker images to download and builds and a few seconds after running while SSL certificates obtaining.
