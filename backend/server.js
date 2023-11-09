@@ -31,7 +31,7 @@ app.post('/api/send', async (req, res) => {
     const currentTime = new Date().getTime();
     const lastEmailTime = ipAddresses[ipAddress] || 0;
     const oneDayInMs = process.env.SEND_EMAIL_PERIOD_HOURS * 60 * 60 * 1000; // Milliseconds in a day
-
+    
     if (currentTime - lastEmailTime < oneDayInMs) {
         return res.status(429).json({ message: 'You can send only one email per day' });
     }

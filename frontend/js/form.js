@@ -83,6 +83,22 @@ closeButton.addEventListener('click', () => {
     hidePopup();
 })
 
+/* clear inputs */
+function emptyForm() {
+    userName.value = '';
+    userEmail.value = '';
+    userPhone.value = '';
+    userMessage.value = '';
+}
+
+/* show labels */
+function showAllLabels() {
+    const labels = document.querySelectorAll('.form-placeholder');
+    labels.forEach((label) => {
+        label.style.display = 'block';
+    });
+}
+
 //form submit
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -96,7 +112,7 @@ form.addEventListener('submit', function(event) {
 
     const json = JSON.stringify(userData);
 
-    fetch('http://localhost:3000/submit', {
+    fetch('http://localhost:3000/api/send', {
         method: 'POST',
         body: json,
         headers: {
@@ -107,13 +123,16 @@ form.addEventListener('submit', function(event) {
         if (response.ok) {
             showPopup('./img/popup/success.png', 'Ваші дані прийнято!', "Ми зв'яжемося з вами найближчим часом!");
             emptyForm();
+            showAllLabels();
         } else {
             handleErrorResponse(response);
             emptyForm();
+            showAllLabels();
         }
     })
     .catch(error => {
-        window.location.href = '/error';
+        /* window.location.href = '/error';
+        emptyForm(); */
     })
 
 })
