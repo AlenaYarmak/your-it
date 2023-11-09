@@ -1,9 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
+
+// Middleware to parse JSON and form data
 app.use(bodyParser.json());
+
+// Enable CORS for all routes
+app.use(cors()); // Use the cors middleware
 
 const smtpConfig = {
     host: process.env.SMTP_HOST,
@@ -25,7 +31,7 @@ app.post('/api/send', async (req, res) => {
     const currentTime = new Date().getTime();
     const lastEmailTime = ipAddresses[ipAddress] || 0;
     const oneDayInMs = process.env.SEND_EMAIL_PERIOD_HOURS * 60 * 60 * 1000; // Milliseconds in a day
-
+    
     if (currentTime - lastEmailTime < oneDayInMs) {
         return res.status(429).json({ message: 'You can send only one email per day' });
     }

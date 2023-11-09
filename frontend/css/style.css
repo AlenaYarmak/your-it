@@ -80,6 +80,10 @@ ol, ul {
     background: rgba(0, 0, 0, 0.3);
 }
 
+.section--decrease-opacity {
+    opacity: .7;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -104,7 +108,6 @@ ol, ul {
     height: 250px;
     -webkit-box-shadow: 1px 5px 5px #6A6D9E;
             box-shadow: 1px 5px 5px #6A6D9E;
-    margin-bottom: 91px;
 }
 
 .btn-main {
@@ -131,7 +134,6 @@ ol, ul {
 .offerta-title {
     margin: 0 auto;
     max-width: 425px;
-    margin-bottom: 91px;
 }
 
 .offerta-text {
@@ -625,15 +627,17 @@ ol, ul {
     background-color: #fff;
     border-radius: 50px;
     display: none;
-    display: flex;
     justify-content: center;
     text-align: center;
     color: var(--primary-color);
     z-index: 999;
+
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .popup-wrapper {
-    padding: 55px;
+    position: relative;
+    padding: 30px;
 }
 
 .popup-img {
@@ -648,6 +652,8 @@ ol, ul {
 
 .popup-text {
     font-size: 22px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .popup-button {
@@ -661,6 +667,12 @@ ol, ul {
     color: #FFF;
 }
 
+.wrapper-button {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+}
+
 .close-button {
     position: relative;
     width: 50px;
@@ -668,7 +680,6 @@ ol, ul {
 	border-radius: 25px;
 	background: #d2d1d1;
     margin-left: auto;
-
 }
 
 .close-button:before {
@@ -834,8 +845,6 @@ ol, ul {
     transition: all 0.3s ease;
 }
 
-
-
 .social-phone {
     background: url(../img/socials/phone.png);
     background-size: contain;
@@ -914,4 +923,62 @@ ol, ul {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+/* error page */
+
+.wrapper--error {
+    height: 100vh;
+    padding-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.error-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 50px;
+    background-color: #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 45px 85px 38px;
+    max-width: 800px;
+    max-height: 600px;
+}
+
+.error-img {
+    width: 300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.error-title {
+    color: var(--primary-color);
+    font-size: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 45px 0px;
+}
+
+.return-button {
+    background: var(--primary-color);
+    border-radius: 25px;
+    border: none;
+    color: var(--light-color);
+    font-size: 18px;
+    height: 50px;
 }

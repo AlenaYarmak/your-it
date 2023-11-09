@@ -1,19 +1,30 @@
+//form and wrapper variables
 const form = document.querySelector('.form');
+const wrapper = document.querySelector('.wrapper');
 
 const inputs = document.querySelectorAll('.form-input');
-
+//user data variables
 const userName = document.getElementById('name');
 const userEmail = document.getElementById('email');
 const userPhone = document.getElementById('phone');
 const userMessage = document.getElementById('message');
 
 const wrapperBlur = document.querySelector('.wrapper--blur');
-const popupButtons = document.querySelectorAll('.popup-button');
-const closeButtons = document.querySelectorAll('.close-button');
-const popups = document.querySelectorAll('.popup');
-
+const sectionOpacity = document.querySelector('.section--decrease-opacity');
+const mapSection = document.querySelector('.map-content');
+const formSection = document.querySelector('.form-container');
+//buttons variables
+const popupButton = document.querySelector('.popup-button');
+const closeButton = document.querySelector('.close-button');
+//anchor top
 const headerTop = document.getElementById('main');
 
+const popup = document.querySelector('.popup');
+const popupImg = document.querySelector('.popup-img');
+const popupTitle = document.querySelector('.popup-title');
+const popupText = document.querySelector('.popup-text');
+
+//show and hide labels within their inputs
 inputs.forEach(function(input) {
     input.addEventListener('focus', function() {
         let label = this.nextElementSibling;
@@ -30,44 +41,65 @@ inputs.forEach(function(input) {
     })
 })
 
+//smooth scroll to top page
 function scrollToHeader() {
     headerTop.scrollIntoView({ behavior: 'smooth' });
 }
 
-function showPopup(className) {
-    const popup = document.querySelector(`.${className}`);
-    if (popup) {
-        popup.style.display = 'block';
-        wrapperBlur.classList.add('blur-background');
-    }
+//show popup
+function showPopup(imageSrc, title, text) {
+    popup.style.display = 'flex';
+    wrapperBlur.classList.add('blur-background');
+    mapSection.classList.add('section--decrease-opacity');
+    formSection.classList.add('section--decrease-opacity');
+
+    popupImg.src = imageSrc;
+    popupTitle.textContent = title;
+    popupText.textContent = text;
 }
 
-function hidePopup(popup) {
+//hide popup
+function hidePopup() {
     popup.style.display = 'none';
     wrapperBlur.classList.remove('blur-background');
+    mapSection.classList.remove('section--decrease-opacity');
+    formSection.classList.remove('section--decrease-opacity');
 }
 
-closeButtons.forEach((closeButton, index) => {
-    closeButton.addEventListener('click', () => {
-        hidePopup(popups[index]);
-    })
-})
-
+//hide popup when user click outside
 document.addEventListener('click', (event) => {
-    popups.forEach((popup) => {
-        if (!popup.contains(event.target)) {
-            hidePopup(popup);
-        }
-    })
+    if (popup.style.display === 'flex' && event.target !== popup && !popup.contains(event.target) && event.target !== testBtn) {
+        hidePopup();
+    }
+});
+
+popupButton.addEventListener('click', () => {
+    hidePopup();
+    scrollToHeader();
 })
 
-popupButtons.forEach((popupButton, index) => {
-    popupButton.addEventListener('click', () => {
-        hidePopup(popups[index]);
-        scrollToHeader();
-    })
+//add addEventListener for closeButton
+closeButton.addEventListener('click', () => {
+    hidePopup();
 })
 
+/* clear inputs */
+function emptyForm() {
+    userName.value = '';
+    userEmail.value = '';
+    userPhone.value = '';
+    userMessage.value = '';
+}
+
+/* show labels */
+function showAllLabels() {
+    const labels = document.querySelectorAll('.form-placeholder');
+    labels.forEach((label) => {
+        label.style.display = 'block';
+    });
+}
+
+//form submit
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -80,20 +112,53 @@ form.addEventListener('submit', function(event) {
 
     const json = JSON.stringify(userData);
 
-    fetch('http://localhost:3000/submit', {
+    fetch('http://localhost:3000/api/send', {
         method: 'POST',
         body: json,
         headers: {
             'Content-Type': 'application/json'
         }
     })
-    .then(response => response.json())
-    .then(data => {
-        showPopup(popup_success)
+    .then(response => {
+        if (response.ok) {
+            showPopup('./img/popup/success.png', 'Ваші дані прийнято!', "Ми зв'яжемося з вами найближчим часом!");
+            emptyForm();
+            showAllLabels();
+        } else {
+            handleErrorResponse(response);
+            emptyForm();
+            showAllLabels();
+        }
     })
     .catch(error => {
-        showPopup(popup_error)
-    });
+        /* window.location.href = '/error';
+        emptyForm(); */
+    })
 
 })
 
+function handleErrorResponse(response) {
+    switch (response.status) {
+        case 400:
+            showPopup('./img/popup/limit.png', 'Упс!', 'Сервер не може обробити запит! Спробуйте пізніше!');
+            break;
+        case 404:
+            showPopup('./img/popup/error.png', 'Упс!', 'Щось пішло не так із нашого боку. Повторіть спробу пізніше.');
+            break;
+        case 429:
+            showPopup('./img/popup/limit.png', 'Упс!', 'Забагато запитів! Спробуйте пізніше!');
+            break;
+        case 500:
+            showPopup('./img/popup/error.png', 'Упс!', 'Помилка серверу! Повторіть спробу пізніше.');
+            break;
+        case 503:
+            showPopup('./img/popup/error.png', 'Вибачте!', 'Відправка форми в даний час недоступна. Спробуйте пізніше!');
+            break;
+        case 504:
+            showPopup('./img/popup/error.png', 'Вибачте!', 'Не вдалося виконати відправку! Оновіть сторінку або спробуйте ще раз.');
+            break;
+        default:
+            showPopup('./img/popup/error.png', 'Вибачте!', 'Відправка форми в даний час недоступна. Спробуйте пізніше!');
+            break;
+    }
+}

@@ -112,6 +112,30 @@
         max-width: 120px;
     }
 
+    .form-container {
+        padding: 45px 75px 38px;
+    }
+
+    .form-title {
+        font-size: 36px;
+    }
+
+    .form-input {
+        width: 306px;
+    }
+
+    .form-image--1 {
+        width: 102px;
+        top: -36px;
+        right: -39px;
+    }
+
+    .form-image--2 {
+        width: 82px;
+        right: 45px;
+        top: 57px;
+    }
+
     .footer-logo {
         height: 55px;
     }
@@ -200,6 +224,29 @@
 
     .map-content {
         padding: 50px;
+    }
+
+    .form-container {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .form-images {
+        display: none;
+    }
+
+    .form-input {
+        width: 336px;
+    }
+
+    .form-title {
+        text-align: center;
+    }
+
+    .form-submit {
+        width: 300px;
+        margin: 0 auto;
     }
 }
 
@@ -296,6 +343,23 @@
         max-width: 350px;
     }
 
+    .popup-wrapper {
+        padding: 38px;
+    }
+
+    .popup-img {
+        max-width: 150px;
+        padding: 15px;
+    }
+
+    .form-title {
+        font-size: 25px;
+    }
+
+    .form-input {
+        width: 266px;
+    }
+
     .footer {
         padding-top: 83px;
     }
@@ -336,7 +400,10 @@
     }
 
     .footer-nav {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .about-image {
@@ -345,6 +412,32 @@
 
     .google-map {
         max-width: 300px;
+    }
+
+    .form-title {
+        font-size: 22px;
+    }
+
+    .form-input {
+        width: 223px;
+    }
+
+    .popup-wrapper {
+        padding: 22px;
+    }
+
+    .popup-img {
+        max-width: 120px;
+        padding: 14px;
+    }
+
+    .popup-button {
+        width: 210px;
+        font-size: 16px;
+    }
+
+    .popup-error {
+        padding: 0 5px;
     }
 }
 
@@ -377,5 +470,22 @@
     .google-map {
         max-width: 210px;
         height: 350px;
+    }
+
+    .form-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .form-input {
+        width: 170px;
+    }
+
+    .form-submit {
+        width: 170px;
     }
 }
