@@ -5,5 +5,5 @@
 test.us2h.com {
     root * /srv
     file_server
-    reverse_proxy /api http://backend:3000
+    reverse_proxy /api http://backend:3000{uri}
 }
