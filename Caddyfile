@@ -1,9 +1,5 @@
-{
-    email admin@example.com
-}
-
 test.us2h.com {
     root * /srv
     file_server
-    reverse_proxy /api http://backend:3000{uri}
+    reverse_proxy /api/* http://backend:3000
 }
