@@ -30,20 +30,6 @@ Go to clonned directory
 cd ./your-it
 ```
 
-Change ```yourdomain.name``` domain name and email ```admin@example.com``` in Caddyfile to yours:
-
-```
-{
-    email admin@example.com
-}
-
-yourdomain.name {
-    root * /srv
-    file_server
-    reverse_proxy /api http://backend:3000
-}
-```
-
 Go to root of repository (you should be in same directory with docker-compose.yml file) and run docker-compose stack with command:
 
 ```bash
