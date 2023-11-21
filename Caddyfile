@@ -1,4 +1,4 @@
-test.us2h.com {
+your-it.com.ua {
     root * /srv
     file_server
     reverse_proxy /api/* http://backend:3000
