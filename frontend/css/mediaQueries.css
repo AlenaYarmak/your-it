@@ -4,7 +4,7 @@
     }
 
     .title {
-        padding: 80px 0px;
+        padding: 60px 0px;
     }
 
     .header {
@@ -52,7 +52,7 @@
     }
 
     .title {
-        padding: 70px 0px;
+        padding: 55px 0px;
     }
 
     .header-content {
@@ -144,7 +144,8 @@
 @media (max-width: 768px) {
 
     .title {
-        padding: 60px 0px;
+        padding: 45px 0px;
+        font-size: 36px;
     }
 
     .nav-menu {
@@ -192,10 +193,6 @@
         max-width: 240px;
     }
 
-    .title {
-        font-size: 36px;
-    }
-
     .about-content {
         padding-bottom: 50px;
     }
@@ -211,7 +208,7 @@
     }
 
     .clients-items {
-        padding: 50px 0px;
+        padding: 25px 0px;
     }
 
     .client-item {
@@ -223,7 +220,7 @@
     }
 
     .map-content {
-        padding: 50px;
+        padding: 25px;
     }
 
     .form-container {
@@ -247,6 +244,21 @@
     .form-submit {
         width: 300px;
         margin: 0 auto;
+    }
+
+    .header-menu {
+        padding-top: 35px;
+    }
+
+    .header-menu--offerta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-main {
+        margin-top: 35px;
+        font-size: 16px;
+        max-width: 215px;
     }
 }
 
@@ -361,7 +373,7 @@
     }
 
     .footer {
-        padding-top: 83px;
+        padding-top: 43px;
     }
 
     .footer-img {
@@ -371,6 +383,13 @@
     .footer-contacts {
         width: 100%;
         max-width: 400px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        height: 118px;
+    justify-content: space-between;
+    align-items: center;
     }
 
     .footer-content {
@@ -385,7 +404,15 @@
 
     .used-info  {
         margin: 0 auto;
-        width: 150px;
+        max-width: 250px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-main {
+        margin-top: 45px;
+        font-size: 15px;
+        height: 36px;
     }
 }
 

@@ -26,7 +26,7 @@ const transporter = nodemailer.createTransport(smtpConfig);
 // Object to store IP addresses and the last email sent time.
 const ipAddresses = {};
 
-app.post('/api/send', async (req, res) => {
+app.post('/send', async (req, res) => {
     const ipAddress = req.ip;
     const currentTime = new Date().getTime();
     const lastEmailTime = ipAddresses[ipAddress] || 0;
