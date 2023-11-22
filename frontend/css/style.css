@@ -162,14 +162,14 @@ ol, ul {
 
 .return-btn {
     padding-bottom: 50px;
+    margin: 0 auto;
+    max-width: 164px;
 }
 
 .btn-up {
     background: var(--primary-color);
     border-radius: 15px;
-    width: 164px;
     height: 64px;
-    margin: 0 auto;
     position: relative;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -493,7 +493,7 @@ ol, ul {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 0px 50px 100px;
+    padding: 0px 50px 50px;
 }
 
 .map-section {
@@ -506,6 +506,10 @@ ol, ul {
 
 /* FORM */
 
+.form-section {
+    padding: 50px 0px;
+}
+
 .form-container {
     border-radius: 50px;
     background-color: #fff;
@@ -514,7 +518,7 @@ ol, ul {
     padding: 45px 85px 38px;
     max-width: 986px;
     margin: 0 auto;
-    margin-bottom: 110px;
+    margin-bottom: 60px;
 }
 
 .form-content {
@@ -581,18 +585,17 @@ ol, ul {
 .form-submit {
     border: none;
     border-radius: 20px;
-    background-color: #BB47BA;
+    background-color: #6A6D9E;
     color: #fff;
     max-width: 208px;
     height: 56px;
-
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .form-submit:hover {
-    background-color:#9f3d9d;
+    background-color: var(--hover-color);
 }
 
 .form-images {
@@ -711,7 +714,7 @@ ol, ul {
 /* FOOTER */
 .footer {
     background-color: #DCE2F0;
-    padding-top: 133px;
+    padding-top: 90px;
 }
 
 .footer-content {

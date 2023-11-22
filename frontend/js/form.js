@@ -112,7 +112,7 @@ form.addEventListener('submit', function(event) {
 
     const json = JSON.stringify(userData);
 
-    fetch('http://localhost:3000/api/send', {
+    fetch('/api/send', {
         method: 'POST',
         body: json,
         headers: {
