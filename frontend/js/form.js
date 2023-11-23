@@ -3,6 +3,7 @@ const form = document.querySelector('.form');
 const wrapper = document.querySelector('.wrapper');
 
 const inputs = document.querySelectorAll('.form-input');
+const submit = document.querySelector('.form-submit');
 //user data variables
 const userName = document.getElementById('name');
 const userEmail = document.getElementById('email');
@@ -89,6 +90,8 @@ function emptyForm() {
     userEmail.value = '';
     userPhone.value = '';
     userMessage.value = '';
+
+    submit.disabled = false;
 }
 
 /* show labels */
@@ -102,7 +105,7 @@ function showAllLabels() {
 //form submit
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-
+    submit.disabled = true;
     const userData = {
         name: userName.value,
         email: userEmail.value,
