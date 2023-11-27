@@ -26,23 +26,32 @@ const transporter = nodemailer.createTransport(smtpConfig);
 // Object to store IP addresses and the last email sent time.
 const ipAddresses = {};
 
-app.post('/send', async (req, res) => {
+app.post('/api/send', async (req, res) => {
     const ipAddress = req.ip;
     const currentTime = new Date().getTime();
-    const lastEmailTime = ipAddresses[ipAddress] || 0;
+    const userData = ipAddresses[ipAddress] || { lastEmailTime: 0, emailCounter: 0 };
+    const { lastEmailTime, emailCounter } = userData;
     const oneDayInMs = process.env.SEND_EMAIL_PERIOD_HOURS * 60 * 60 * 1000; // Milliseconds in a day
     
     if (currentTime - lastEmailTime < oneDayInMs) {
-        return res.status(429).json({ message: 'You can send only one email per day' });
+        emailCounter = 0;
+    }
+
+    if (emailCounter >= 3) {
+        return res.status(429).json({ message: 'You can send only two email per day' });
     }
 
     const message_data = req.body;
 
     try {
         await sendEmail(message_data);
-        // Update the last email time for the IP address
-        ipAddresses[ipAddress] = currentTime;
+
+        ipAddresses[ipAddress] = {
+            lastEmailTime: currentTime,
+            emailCounter: emailCounter + 1
+        };
         res.json({ message: 'Data received and email sent successfully!' });
+
     } catch (error) {
         console.error('Error sending email:', error);
         res.status(500).json({ message: 'Internal server error' });
