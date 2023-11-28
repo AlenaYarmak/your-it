@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-
 const app = express();
 
 // Middleware to parse JSON and form data
@@ -29,29 +28,29 @@ const ipAddresses = {};
 app.post('/api/send', async (req, res) => {
     const ipAddress = req.ip;
     const currentTime = new Date().getTime();
-    const userData = ipAddresses[ipAddress] || { lastEmailTime: 0, emailCounter: 0 };
-    const { lastEmailTime, emailCounter } = userData;
+    let userData = ipAddresses[ipAddress] || { lastEmailTime: 0, emailCounter: 0 };
+    let { lastEmailTime, emailCounter } = userData;
+    const emailTimesDay = process.env.SEND_EMAIL_TIMES_DAY;
     const oneDayInMs = process.env.SEND_EMAIL_PERIOD_HOURS * 60 * 60 * 1000; // Milliseconds in a day
     
-    if (currentTime - lastEmailTime < oneDayInMs) {
+    if (currentTime - lastEmailTime > oneDayInMs) {
         emailCounter = 0;
     }
 
-    if (emailCounter >= 3) {
-        return res.status(429).json({ message: 'You can send only two email per day' });
+    if (emailCounter >= emailTimesDay) {
+        return res.status(429).json({ message: `You can send only ${emailTimesDay} email per day` });
     }
+
+    ipAddresses[ipAddress] = {
+        lastEmailTime: currentTime,
+        emailCounter: emailCounter + 1
+    };
 
     const message_data = req.body;
 
     try {
         await sendEmail(message_data);
-
-        ipAddresses[ipAddress] = {
-            lastEmailTime: currentTime,
-            emailCounter: emailCounter + 1
-        };
         res.json({ message: 'Data received and email sent successfully!' });
-
     } catch (error) {
         console.error('Error sending email:', error);
         res.status(500).json({ message: 'Internal server error' });
