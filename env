@@ -1,5 +1,6 @@
 # Backend config
-SEND_EMAIL_PERIOD_HOURS=1
+SEND_EMAIL_PERIOD_HOURS=24
+SEND_EMAIL_TIMES_DAY=3
 
 # SMTP config
 EMAIL_FROM=info@example.com
