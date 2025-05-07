@@ -55,6 +55,10 @@
         padding: 55px 0px;
     }
 
+    .header {
+        background: url(../img/background/background-m.png);
+    }
+
     .header-content {
         padding-top: 60px;
     }
@@ -298,7 +302,7 @@
     .header-description--mobile {
         font-size: 22px;
         max-width: 340px;
-        padding-top: 135px;
+        padding-top: 125px;
         text-align: center;
     }
 
