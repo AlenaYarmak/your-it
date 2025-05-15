@@ -430,6 +430,15 @@
         display: none;
     }
 
+    .consumer__text {
+        font-size: 16px;
+        line-height: 1.1;
+    }
+
+    .consumer__img {
+        width: 80px;
+    }
+
     .footer-nav {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
