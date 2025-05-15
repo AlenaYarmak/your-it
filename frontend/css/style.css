@@ -522,7 +522,6 @@ ol, ul {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 0px 50px 50px;
 }
 
 .map-section {

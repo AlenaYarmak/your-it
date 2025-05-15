@@ -220,11 +220,11 @@
     }
 
     .google-map {
-        max-width: 500px;
+        width: calc(100vw - 140px);
     }
 
     .map-content {
-        padding: 25px;
+        padding: 25px 0px;
     }
 
     .form-container {
@@ -355,10 +355,6 @@
         padding-bottom: 0px;
     }
 
-    .google-map {
-        max-width: 350px;
-    }
-
     .popup-wrapper {
         padding: 38px;
     }
@@ -450,10 +446,6 @@
         max-width: 300px;
     }
 
-    .google-map {
-        max-width: 300px;
-    }
-
     .form-title {
         font-size: 22px;
     }
@@ -505,11 +497,6 @@
 
     .about-text {
         max-width: 220px;
-    }
-
-    .google-map {
-        max-width: 210px;
-        height: 350px;
     }
 
     .form-item {
