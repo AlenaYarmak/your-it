@@ -460,6 +460,31 @@ ol, ul {
             flex-direction: row-reverse;
 }
 
+/* COSUMER */
+.consumer__banner {
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.consumer__text {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 21px;
+}
+
+.link__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.consumer__link {
+    display: inline-block;
+}
+
 /* CLIENTS */
 
 .clients-items {
