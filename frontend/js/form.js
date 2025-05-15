@@ -124,7 +124,7 @@ form.addEventListener('submit', function(event) {
     })
     .then(response => {
         if (response.ok) {
-            showPopup('./img/popup/success.png', 'Ваші дані прийнято!', "Ми зв'яжемося з вами найближчим часом!");
+            showPopup('./img/popup/success.webp', 'Ваші дані прийнято!', "Ми зв'яжемося з вами найближчим часом!");
             emptyForm();
             showAllLabels();
         } else {
@@ -143,25 +143,25 @@ form.addEventListener('submit', function(event) {
 function handleErrorResponse(response) {
     switch (response.status) {
         case 400:
-            showPopup('./img/popup/limit.png', 'Упс!', 'Сервер не може обробити запит! Спробуйте пізніше!');
+            showPopup('./img/popup/limit.webp', 'Упс!', 'Сервер не може обробити запит! Спробуйте пізніше!');
             break;
         case 404:
-            showPopup('./img/popup/error.png', 'Упс!', 'Щось пішло не так із нашого боку. Повторіть спробу пізніше.');
+            showPopup('./img/popup/error.webp', 'Упс!', 'Щось пішло не так із нашого боку. Повторіть спробу пізніше.');
             break;
         case 429:
-            showPopup('./img/popup/limit.png', 'Упс!', 'Забагато запитів! Спробуйте пізніше!');
+            showPopup('./img/popup/limit.webp', 'Упс!', 'Забагато запитів! Спробуйте пізніше!');
             break;
         case 500:
-            showPopup('./img/popup/error.png', 'Упс!', 'Помилка серверу! Повторіть спробу пізніше.');
+            showPopup('./img/popup/error.webp', 'Упс!', 'Помилка серверу! Повторіть спробу пізніше.');
             break;
         case 503:
-            showPopup('./img/popup/error.png', 'Вибачте!', 'Відправка форми в даний час недоступна. Спробуйте пізніше!');
+            showPopup('./img/popup/error.webp', 'Вибачте!', 'Відправка форми в даний час недоступна. Спробуйте пізніше!');
             break;
         case 504:
-            showPopup('./img/popup/error.png', 'Вибачте!', 'Не вдалося виконати відправку! Оновіть сторінку або спробуйте ще раз.');
+            showPopup('./img/popup/error.webp', 'Вибачте!', 'Не вдалося виконати відправку! Оновіть сторінку або спробуйте ще раз.');
             break;
         default:
-            showPopup('./img/popup/error.png', 'Вибачте!', 'Відправка форми в даний час недоступна. Спробуйте пізніше!');
+            showPopup('./img/popup/error.webp', 'Вибачте!', 'Відправка форми в даний час недоступна. Спробуйте пізніше!');
             break;
     }
 }

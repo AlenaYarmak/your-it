@@ -90,7 +90,7 @@ ol, ul {
 }
 
 .header {
-    background: url(../img/background/background.png);
+    background: url(../img/background/background.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -458,6 +458,35 @@ ol, ul {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+}
+
+/* COSUMER */
+.consumer__banner {
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.consumer__text {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 21px;
+}
+
+.link__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.consumer__link {
+    display: inline-block;
 }
 
 /* CLIENTS */
@@ -828,8 +857,8 @@ ol, ul {
 
 /* social icons */
 
-.social-email {
-    background: url(../img/socials/email.png);
+.social-item {
+    display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
     -webkit-transition: all 0.3s ease;
@@ -837,95 +866,54 @@ ol, ul {
     transition: all 0.3s ease;
     width: 30px;
     height: 30px;
+}
+
+.social-item:hover {
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.social-email {
+    background-image: url(../img/socials/email.png);
 }
 
 .social-email:hover {
-    background: url(../img/socials/hover-email.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    background-image: url(../img/socials/hover-email.png);
 }
 
 .social-phone {
-    background: url(../img/socials/phone.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    width: 30px;
-    height: 30px;
+    background-image: url(../img/socials/phone.png);
 }
 
 .social-phone:hover {
-    background: url(../img/socials/hover-phone.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    background-image: url(../img/socials/hover-phone.png);
 }
 
 .social-telegram {
-    background: url(../img/socials/telegram.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    width: 30px;
-    height: 30px;
+    background-image: url(../img/socials/telegram.png);
 }
 
 .social-telegram:hover {
-    background: url(../img/socials/hover-telegram.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    background-image: url(../img/socials/hover-telegram.png);
 }
 
 .social-viber {
-    background: url(../img/socials/viber.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    width: 30px;
-    height: 30px;
+    background-image: url(../img/socials/viber.png);
 }
 
 .social-viber:hover {
-    background: url(../img/socials/hover-viber.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    background-image: url(../img/socials/hover-viber.png);
 }
 
 .social-whatsapp {
-    background: url(../img/socials/whatsapp.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    width: 30px;
-    height: 30px;
+    background-image: url(../img/socials/whatsapp.png);
 }
 
 .social-whatsapp:hover {
-    background: url(../img/socials/hover-whatsapp.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    background-image: url(../img/socials/hover-whatsapp.png);
 }
 
 /* error page */
